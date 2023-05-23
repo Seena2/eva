@@ -1,0 +1,394 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Navigation Menu TOP*/
+.header {
+    margin: 0;
+    overflow: hidden;
+    background-color: #fbfb99;
+    display: grid;
+    grid-template-columns: 105px 1fr;
+}
+
+.nav {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 50%;
+    padding: 0.1rem;
+    z-index: 2;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nav ul a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+.top_nav {
+    display: flex;
+    justify-self: end;
+}
+
+.main_nav {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #fbfb99;
+}
+
+.main_nav li a {
+    font-size: 1.1rem;
+    padding: 0.2rem;
+    color: #3082c5;
+    font: bold;
+    font-size: 1.1rem;
+}
+
+.nav ul a:hover {
+    font-size: 1.2rem;
+    color: #2e2c2c;
+    text-shadow: #2e2c2c;
+    border-radius: 5px;
+    padding: 3px;
+    text-decoration: underline;
+}
+
+/*sticky class added with Js*/
+
+
+/*cpd submenus*/
+.cpd_nav ul {
+    font-size: 1rem;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaccbc;
+}
+
+.cpd_nav ul li {
+    padding: 1rem;
+}
+
+
+
+
+/*===Content===*/
+.content {
+    margin: 0;
+}
+
+/*hero_slider*/
+.hero_slider {
+    width: 100%;
+    margin: 0;
+    height: 20rem;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*president Message*/
+.pres_msg {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.pres_img {
+    height: 8rem;
+    width: 8rem;
+}
+
+.president-msg {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.msg {
+    text-align: justify;
+    padding: 1rem;
+}
+
+.section_header {
+    background-color: #fbfb99;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.partner_logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around;
+}
+
+.partner_logo {
+    width: 5rem;
+    padding: 1rem;
+
+}
+
+
+/*=======ABOUT PAGE=====*/
+.card_icon {
+    margin-top: 1rem;
+    width: 6rem;
+}
+
+.bullet_pts ul {
+    margin-left: 4rem;
+}
+
+/*===Text Justification=====*/
+.left_Justified {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.justify {
+    text-align: justify;
+    margin: 1rem 2rem;
+}
+
+.centered {
+    margin: 1rem;
+    text-align: center;
+}
+
+
+/*===List Style Types====*/
+.numbered {
+    list-style-type: decimal;
+    margin-left: 2rem;
+}
+
+.numbered li {
+    padding: 0.3rem;
+    text-align: justify;
+}
+
+.noStyle {
+    list-style-type: none;
+    padding: 2rem;
+}
+
+/*===EVJ====*/
+.right_nav {
+    position: fixed;
+    right: 0;
+    top: 6.2rem;
+    background-color: beige;
+    justify-content: center;
+    padding: 1rem;
+    bottom: 8rem;
+}
+
+/*publications*/
+fieldset {
+    margin-top: 2rem;
+}
+
+/*===Submission Form===*/
+.form_article,
+.form_Rm {
+    background-color: #cccecb;
+    padding: 2rem;
+    margin: auto;
+    width: 80%;
+}
+
+.form_article div,
+.form_Rm div {
+    text-align: justify;
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+}
+
+.textbox {
+    display: block;
+    width: 90%;
+    padding: 0.4rem;
+}
+
+/*==Members form===*/
+.form_Rm div {
+    text-align: justify;
+    margin-top: 0.4rem;
+}
+
+/*==buttons==*/
+.btn_large {
+    display: block;
+    width: 80%;
+    background-color: #537fb8;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Colors*/
+.yellowBg {
+    background-color: #fbfb99;
+    padding: 0;
+}
+
+.whitebg {
+    background-color: #fff;
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+/*CPD-Training*/
+
+/*==CARDS and COLUMNS==*/
+/* 3:1*/
+.card31 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/*form card*/
+.card2form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+/* 5 cols*/
+.card5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/*4:1*/
+.cols41 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.cols4L {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: 6rem;
+    border-color: 1px solid #2e2c2c;
+}
+
+.card3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    justify-content: space-around;
+}
+
+/*50:50*/
+.card2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    justify-items: center;
+}
+
+/*images*/
+.small_img {
+    width: 14rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/*ACCORDION  STYLE*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #f1f79c;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
+/*===FOOTER===*/
+.footer_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.footer_card {
+    background-color: #2e2c2c;
+    color: #fff;
+    justify-content: space-around;
+    padding: 0.2rem;
+}
+
+.footer_card {
+    padding-top: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    justify-content: end;
+}
+
+.footer_card p {
+    text-align: justify;
+    padding-left: 1rem;
+}
+
+.footer_card p strong {
+    font-size: 0.9rem;
+}

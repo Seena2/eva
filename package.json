@@ -1,0 +1,16 @@
+{
+  "name": "eva",
+  "version": "1.0.0",
+  "description": "eva website reloaded with JS",
+  "private":true,
+  "scripts": {
+    "test": " echo \"error: no test specified\" && exit 1",
+    "build":"webpack"
+  },
+  "author": "Seena",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
