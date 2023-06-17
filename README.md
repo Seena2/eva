@@ -1,2 +1,0 @@
-# eva
-The EVA website
