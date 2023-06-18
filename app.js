@@ -6,7 +6,8 @@ const app=express();
 app.set('view engine', 'ejs');
 
 //listen for requests on port ###
-app.listen(3000);
+const port=process.env.port||3000;
+app.listen(port,()=>console.log(`server start running on port: ${port}`));
 
 //specify the public folder for static files like css and images
 app.use(express.static('public'));
