@@ -7,11 +7,7 @@
         <%- include('./partials/nav.ejs');%>
             <!--Content-->
             <div class="content">
-                <div id="image_slider">
-                    <div class="navigation-buttons">
-                        <img class="slider-img" src="/images/conf36-web.jpg" alt="" srcset="">
-
-                    </div>
+                <%- include('./partials/carousel.ejs');%>
 
                     <h3 class="section_header">MESSAGE FROM THE PRESIDENT</h3>
                     <div class="presedants_msg">
@@ -72,9 +68,11 @@
                     <p class="temp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit nostrum
                         maxime dolore, ipsum molestiae eligendi aspernatur? Delectus necessitatibus ipsum officiis culpa
                         deserunt, nulla distinctio saepe repellat hic doloremque, repudiandae natus. </p>
-                </div>
+               
                 <!--Footer-->
                 <%- include('./partials/footer.ejs');%>
+
+                <script src="/scripts/main.js"></script>
     </body>
 
 </html>
