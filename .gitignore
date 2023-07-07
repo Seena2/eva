@@ -1,4 +1,6 @@
 node_modules
+/public/assets
+/home/seena2/repos/top/projects/eva/public/assets
 reference
 logger.js
 person.js

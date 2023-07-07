@@ -71,6 +71,9 @@ app.get('/conference', (req, res) => {
 app.get('/news', (req, res) => {
     res.render('news', { title: "News" });
 });
+app.get('/contact', (req, res) => {
+    res.render('contact', { title: "Contact Us" });
+});
 
 //for Submenus
 app.get('/news/create', (req, res) => {
