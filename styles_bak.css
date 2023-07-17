@@ -1,0 +1,345 @@
+/* varaibles */
+:root{
+    --yellow: #eef58f;
+    --blue: #2d71d6;
+    --gray:#5c5c5a;
+    --black:#222222;
+    --bg:#ffffff;
+}
+
+/* reset */
+body,p,h1,h2,h3,a,ul,li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/* base styles */
+body {
+    background: var(--bg);
+    overflow-x: hidden;
+    font-family: 'Rubic regular', serif;
+}
+.button{
+    background: var(--yellow);
+    border: 2px solid var(--bg);
+    color: var(--blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0,.6);
+    display: inline-block;
+}
+.button:hover{
+    cursor: pointer;
+    color: #fff;
+    background: var(--blue);
+}
+input,textarea{
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #9893D8;
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #222;
+}
+
+/* fonts */
+@font-face {
+    font-family:'Rubic Regular' ;
+    src: url(/assets/fonts/Rubik-Regular.ttf);
+}
+h1,h2,h3,h4{
+    color: #5b5b5e;
+    font-weight: normal;
+}
+p,a,li{
+    color: #9893D8;
+}
+h1,h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.1em;
+}
+.leading{
+    font-size: 1.1em;
+}
+
+/* mobile styles */
+
+
+/* MEDIA QUERIES */
+/* small tablet styles */
+@media screen and(min-width: 620px){
+body{
+    font-size: 14px;
+}
+}
+
+/* large tablets and laptops styles */
+@media screen and(min-width: 960px){
+body{
+    font-size: 18px;
+}
+}
+
+/* desktop styles */
+@media screen and(min-width: 1200px){
+body{
+    font-size: 20px;
+}
+}
+    
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+/*nav and footer styles*/
+.top_nav {
+    border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-right: 2rem;
+}
+
+.logo {
+    width: 5rem;
+    padding: 0.5rem 1.2rem;
+    float: left;
+}
+
+.moto {
+    padding-top: 2rem;
+    align-self: center;
+    font-size: 1.6rem;
+}
+
+
+.submenu {
+    height: 4rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.social-top {
+    text-align: end;
+    padding-bottom: 0;
+}
+
+.fa {
+    margin-top: 0.5rem;
+    padding-left: 0.8em;
+    color: #2d71d6;
+}
+
+.fa:hover {
+    color: #222;
+}
+
+.submenu ul {
+    margin-top: 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.top_nav li {
+    list-style-type: none;
+
+}
+
+.top_nav li a {
+    display: block;
+    color: #1f4fd4;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.top_nav li a:hover {
+    color: #222;
+    text-decoration: overline;
+    margin-left: 0.8em;
+}
+
+/*main Nav*/
+nav {
+    /* sticky nav*/
+    position: sticky;
+    top: 0px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0,.6);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #eef58f;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    justify-items: center;
+    padding-right: 1.2rem;
+    list-style: none;
+    z-index: 2;
+    align-items: flex-end;
+}
+
+nav li a {
+    color: #1f4fd4;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #ffffff;
+    color: #222;
+    padding: 1rem;
+}
+
+
+
+
+/*Footer Styling */
+.footer {
+    background-color: #5c5c5a;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    color: #777;
+    padding: 80px auto 20px;
+}
+
+.evj_logo {
+    padding: 5px;
+    text-align: center;
+}
+
+.evj-img {
+    width: 14rem;
+}
+
+
+.footer h3 {
+    color: #f0f070;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.footer p {
+    color: #fafaf4;
+    font-size: 14px;
+}
+
+.copryright {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/*Index page styling */
+/*Carousel slider*/
+#slider,
+.wrap,
+.slide-content {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.slide{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slide1{background-image: url('/images/conf36-web.jpg');}
+.slide2{background-image: url('/images/Participants-7-2.jpg');}
+.slide3{background-image: url('/images/EVJ-Accredited.jpg');}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.slide-content span{
+    font-size: 3rem;
+    color: #ffffff;
+    background-color: rgb(0, 0,0, .6);
+    padding: 2rem;
+    border-radius: .9rem;
+}
+.prev,.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+
+
+
+
+.section_header {
+    padding: 2rem 1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.presedants_msg {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.president-msg img {
+    margin-left: 4rem;
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+}
+
+
+.about_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.about_card div {
+    background-color: #eef58f;
+    align-self: center;
+    text-align: justify;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+.card-icon{
+    width: 8rem;
+}
+.read-more{
+    color: #1f4fd4;
+}
+/* content Justification*/
+.justify_center {
+    text-align: center;
+}

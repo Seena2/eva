@@ -1,20 +1,33 @@
 /* varaibles */
-:root{
+:root {
     --yellow: #eef58f;
     --blue: #2d71d6;
-    --gray:#5c5c5a;
-    --black:#222222;
-    --bg:#ffffff;
+    --gray: #5c5c5a;
+    --black: #222222;
+    --bg: #ffffff;
 }
 
 /* reset */
-body,p,h1,h2,h3,a,ul,li {
+body,
+p,
+h1,
+h2,
+h3,
+a,
+ul,
+li {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-li{
+
+li {
     list-style-type: none;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 /* base styles */
@@ -23,161 +36,77 @@ body {
     overflow-x: hidden;
     font-family: 'Rubic regular', serif;
 }
-.button{
+
+.button {
     background: var(--yellow);
     border: 2px solid var(--bg);
     color: var(--blue);
     padding: 6px 12px;
     border-radius: 20px;
     text-transform: uppercase;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0,.6);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
     display: inline-block;
 }
-.button:hover{
+
+.button:hover {
     cursor: pointer;
     color: #fff;
     background: var(--blue);
 }
-input,textarea{
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px 16px;
-    border-radius: 20px;
-    border: 2px solid #9893D8;
-    display: block;
-    width: 80%;
-    margin: auto;
-    color: #222;
-}
+
+
 
 /* fonts */
 @font-face {
-    font-family:'Rubic Regular' ;
+    font-family: 'Rubic Regular';
     src: url(/assets/fonts/Rubik-Regular.ttf);
 }
-h1,h2,h3,h4{
-    color: #5b5b5e;
+
+h1,
+h2,
+h3,
+h4 {
+    color: #050511;
     font-weight: normal;
 }
-p,a,li{
-    color: #9893D8;
+
+p,
+a,
+li {
+    color: #010108;
 }
-h1,h3{
+
+h1,
+h3 {
     font-size: 1.2em;
 }
-h2{
+
+h2 {
     font-size: 1.6em;
 }
-h4{
+
+h4 {
     font-size: 1.1em;
 }
-.leading{
+
+.leading {
     font-size: 1.1em;
 }
 
 /* mobile styles */
-
-
-/* MEDIA QUERIES */
-/* small tablet styles */
-@media screen and(min-width: 620px){
-body{
-    font-size: 14px;
-}
-}
-
-/* large tablets and laptops styles */
-@media screen and(min-width: 960px){
-body{
-    font-size: 18px;
-}
-}
-
-/* desktop styles */
-@media screen and(min-width: 1200px){
-body{
-    font-size: 20px;
-}
-}
-    
-
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-
-
-
-
-
-/*nav and footer styles*/
-.top_nav {
-    border-bottom: 1px solid #ddd;
+.grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding-right: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
 }
 
-.logo {
-    width: 5rem;
-    padding: 0.5rem 1.2rem;
-    float: left;
+/* hide top-nav on mobiles and use burger menu for main-Nav */
+.top-nav {
+    display: none;
 }
 
-.moto {
-    padding-top: 2rem;
-    align-self: center;
-    font-size: 1.6rem;
-}
-
-
-.submenu {
-    height: 4rem;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-
-}
-
-.social-top {
-    text-align: end;
-    padding-bottom: 0;
-}
-
-.fa {
-    margin-top: 0.5rem;
-    padding-left: 0.8em;
-    color: #2d71d6;
-}
-
-.fa:hover {
-    color: #222;
-}
-
-.submenu ul {
-    margin-top: 2.3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.top_nav li {
-    list-style-type: none;
-
-}
-
-.top_nav li a {
-    display: block;
-    color: #1f4fd4;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.top_nav li a:hover {
-    color: #222;
-    text-decoration: overline;
-    margin-left: 0.8em;
+.main-nav {
+    display: none;
 }
 
 /*main Nav*/
@@ -185,161 +114,474 @@ nav {
     /* sticky nav*/
     position: sticky;
     top: 0px;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0,.6);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
+    background-color: #eef58f;
+    padding: 0.2rem 1rem;
+    z-index: 2;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    
-    background-color: #eef58f;
-    padding: 0.5rem 1rem;
-    overflow: hidden;
-    justify-items: center;
-    padding-right: 1.2rem;
-    list-style: none;
-    z-index: 2;
-    align-items: flex-end;
+.mobile {
+    grid-column: 1/13;
+}
+
+.site-title {
+    grid-column: 1/12;
+    text-align: center;
+}
+
+.mobile ul {
+    display: none;
+}
+
+.logo {
+    max-width: 20%;
+    border-radius: 50%;
+}
+
+.moto {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.humberger {
+    grid-column: 12/13;
 }
 
 nav li a {
     color: #1f4fd4;
     font-size: 1rem;
     text-align: center;
-    text-decoration: none;
+    transform: 7s ease;
+    font-weight:100;
 }
 
 nav li a:hover {
-    background-color: #ffffff;
     color: #222;
-    padding: 1rem;
-}
-
-
-
-
-/*Footer Styling */
-.footer {
-    background-color: #5c5c5a;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    color: #777;
-    padding: 80px auto 20px;
-}
-
-.evj_logo {
-    padding: 5px;
-    text-align: center;
-}
-
-.evj-img {
-    width: 14rem;
-}
-
-
-.footer h3 {
-    color: #f0f070;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.footer p {
-    color: #fafaf4;
-    font-size: 14px;
-}
-
-.copryright {
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
 }
 
 /*Index page styling */
 /*Carousel slider*/
-#slider,
-.wrap,
-.slide-content {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
-
-.slide{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.slide1{background-image: url('/images/conf36-web.jpg');}
-.slide2{background-image: url('/images/Participants-7-2.jpg');}
-.slide3{background-image: url('/images/EVJ-Accredited.jpg');}
-
-.slide-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#welcome {
     align-items: center;
+    padding: 30px 20px;
+    background: url(/assets/images/Participants-7-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#welcome div {
+    grid-column: 1/13;
+}
+
+.welcome-text {
+    margin: 1rem 0.2rem;
+    grid-column: 1/6;
+    background-color: rgba(31, 79, 212, 0.5);
+    padding: 0.8rem;
+    border-radius: 20px;
+}
+
+.welcome-text h2 {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+}
+
+.welcome-text p {
+    color: var(--bg);
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+.buttons {
+    margin: 20px 0;
     text-align: center;
 }
-.slide-content span{
-    font-size: 3rem;
-    color: #ffffff;
-    background-color: rgb(0, 0,0, .6);
-    padding: 2rem;
-    border-radius: .9rem;
-}
-.prev,.next{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
+
+.buttons a {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
 }
 
+/*president message*/
+#President-message {
+    background-color: var(--yellow);
+}
 
-
+#President-message div {
+    grid-column: 1/13;
+}
 
 .section_header {
-    padding: 2rem 1rem;
+    margin-top: 0.3rem;
+    padding: 1rem;
     text-align: center;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
-.presedants_msg {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+.president-img {
+    grid-column: 1/4;
+    text-align: center;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .4);
 }
 
 .president-msg img {
-    margin-left: 4rem;
+    padding: auto;
     width: 10rem;
     height: 10rem;
-    justify-content: center;
+
 }
 
-
-.about_card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.president-img p {
+    padding: 0.3rem;
+    text-align: center;
+    color: var(--blue);
 }
 
-.about_card div {
-    background-color: #eef58f;
-    align-self: center;
+.president-m {
     text-align: justify;
-    margin: 0.5rem;
     padding: 1rem;
 }
-.card-icon{
-    width: 8rem;
+
+/* About Us, news,journals,Trainings,projects and partners  section*/
+#about div,
+#news div,
+#journals div,
+#trainings div,
+#projects div,
+#partners div,
+#footer div {
+    grid-column: 1/13;
 }
-.read-more{
+
+.cards {
+    text-align: center;
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+.card * {
+    margin-top: 0;
+    padding: auto;
+}
+
+.card-icon {
+    text-align: center;
+    padding: auto;
+    max-width: 40%;
+}
+
+.card p {
+    padding: 0 0.5rem;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.card h4,
+.read-more {
     color: #1f4fd4;
+    padding: 0.5rem;
 }
+
+.card h4 {
+    margin-bottom: 0;
+}
+
+#journals div div {
+    padding: 1rem;
+    grid-column: span 6;
+    text-align: center;
+}
+
+/* yellow stripe for odd secctions */
+#news,
+#trainings,
+#partners {
+    background-color: var(--yellow);
+}
+
+/*Contact Form*/
+#contact {
+    padding: 30px 20px;
+    background: #bfcef7;
+}
+
+#contact h3,
+#contact p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact form {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 2px solid #9893D8;
+    display: block;
+    color: #222;
+}
+
 /* content Justification*/
 .justify_center {
     text-align: center;
+}
+
+/*Footer Styling */
+footer {
+    background-color: #14153D;
+    padding: 30px 20px;
+}
+
+.evj-logo {
+    max-width: 40%;
+}
+
+footer p {
+    color: var(--bg);
+    font-size: 0.8rem;
+}
+
+footer h3,
+.social-bottom,
+.social-bottom a {
+    color: var(--yellow);
+}
+
+.social-bottom a {
+    padding: 0.6rem;
+    font-size: 1.5rem;
+}
+
+.social-bottom a:hover {
+    color: var(--blue);
+}
+
+
+/* MEDIA QUERIES */
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+
+    /*Nav*/
+    .logo {
+        max-width: 10%;
+        border-radius: 50%;
+    }
+
+    .moto {
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+
+    /*Welcome */
+    #welcome div {
+        grid-column: 1/8;
+    }
+
+    .welcome-text h2 {
+        color: var(--yellow);
+        font-weight: bolder;
+        font-size: 1.4rem;
+        justify-content: center;
+        margin-bottom: 0.4rem;
+    }
+
+    .welcome-text p {
+        color: var(--bg);
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .buttons a {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    /*about*/
+    .card {
+        display: flex;
+    }
+
+    .card p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    /* News, Training and projects Section*/
+    #news .cards .card,
+    #trainings .cards .card,
+    #projects .cards .card {
+        grid-column: span 6;
+        display: block;
+        padding: 0.5rem 2rem;
+    }
+  
+    .card-icon {
+        text-align: center;
+        max-width: 60%;
+    }
+
+    /*journals section and partners*/
+    #journals div div,
+    #partners div div {
+        display: block;
+        padding: 1rem;
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    #journals h4 {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .buttons a {
+        font-size: 0.9rem;
+    }
+
+    /*Contact Form*/
+    #contact form {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    #contact button {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    /*Footer */
+    /*Footer Styling */
+   #footer .cards .card{
+    grid-column: span 4;
+    display: block;
+   }
+    .evj-logo {
+        max-width: 80%;
+    }
+    #footer div p{
+        font-size: 0.8rem;
+    }
+
+    footer h3,
+    .social-bottom,
+    .social-bottom a {
+        color: var(--yellow);
+    }
+
+    .social-bottom a {
+        padding: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+   
+}
+
+/* large tablets and laptops styles */
+@media screen and (min-width: 960px) {
+   /*grid*/
+    .grid{
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+    }
+    .mobile{
+        display: none;
+    }
+   
+    /*Nav*/
+    /* hide mobile nav */
+/*TOP nav styling */
+.top-nav {
+    margin: 0;
+    display: grid;
+    grid-column: 1/13;
+}
+.site-title{
+    grid-column: 1/6;
+}
+
+.secondary-menu {
+    grid-column: 6/13;
+    justify-self: end;
+}
+
+.logo {
+    float: left;
+    max-width: 25%;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.moto{
+    align-self: center;
+    padding-top: 2rem;
+    display: block;
+    font-size: 2rem;
+}
+.social-top{
+    padding: 0.5rem;
+}
+.social-top a{
+    float: right;
+    padding:0.8rem;
+    font-size: 1.2rem;
+    color: var(--blue);
+}
+
+.submenu{
+    padding-top: 5rem;
+}
+.submenu a{
+    color: var(--blue);
+    padding: 0.5rem;
+}
+.social-top a:hover,.submenu a:hover{
+    color: var(--black);
+}
+
+/*main Nav*/
+.main-nav{
+    display: block;
+}
+nav {
+    margin: 0;
+    /* sticky nav*/
+    position: sticky;
+    top: 0px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
+    background-color: #eef58f;
+    padding: 0.2rem 1rem;
+    z-index: 2;
+}
+nav ul{
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+}
+}
+
+/* desktop styles */
+@media screen and(min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+
+
 }
