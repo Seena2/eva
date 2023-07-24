@@ -34,7 +34,11 @@ li {
 body {
     background: var(--bg);
     overflow-x: hidden;
-    font-family: 'Rubic regular', serif;
+    font-family: 'Rubic regular', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    height: 100%;
+    width: 100%;
 }
 
 .button {
@@ -93,18 +97,35 @@ h4 {
     font-size: 1.1em;
 }
 
-/* mobile styles */
+/*Grid spec*/
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 10px;
 }
 
-/* hide top-nav on mobiles and use burger menu for main-Nav */
-.top-nav {
+/* Mobile styles */
+/* hide social and secondary on mobiles and use burger menu for main-Nav */
+.secondary-menu {
     display: none;
 }
 
+.site-title {
+    grid-column: 1/13;
+    text-align: center;
+}
+
+.logo {
+    max-width: 20%;
+    border-radius: 50%;
+}
+
+.moto {
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/*hide main-nav and use mobile nav instead*/
 .main-nav {
     display: none;
 }
@@ -124,39 +145,34 @@ nav {
     grid-column: 1/13;
 }
 
-.site-title {
-    grid-column: 1/12;
-    text-align: center;
-}
-
 .mobile ul {
     display: none;
 }
 
-.logo {
-    max-width: 20%;
-    border-radius: 50%;
+.mobile div {
+    grid-column: 1/13;
 }
 
-.moto {
-    font-style: italic;
-    font-size: 0.8rem;
-}
-
-.humberger {
-    grid-column: 12/13;
+.mobile div a {
+    font-size: 1.4rem;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 nav li a {
     color: #1f4fd4;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
     transform: 7s ease;
-    font-weight:100;
+    font-weight: 100;
 }
 
 nav li a:hover {
-    color: #222;
+    display: inline;
+    background: var(--blue);
+    color: var(--bg);
+    padding: 0.7rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
 }
 
 /*Index page styling */
@@ -225,7 +241,6 @@ nav li a:hover {
 }
 
 .president-img {
-    grid-column: 1/4;
     text-align: center;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .4);
 }
@@ -234,7 +249,6 @@ nav li a:hover {
     padding: auto;
     width: 10rem;
     height: 10rem;
-
 }
 
 .president-img p {
@@ -245,7 +259,7 @@ nav li a:hover {
 
 .president-m {
     text-align: justify;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /* About Us, news,journals,Trainings,projects and partners  section*/
@@ -279,7 +293,7 @@ nav li a:hover {
 }
 
 .card p {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     text-align: justify;
     font-size: 0.9rem;
 }
@@ -337,10 +351,6 @@ nav li a:hover {
     color: #222;
 }
 
-/* content Justification*/
-.justify_center {
-    text-align: center;
-}
 
 /*Footer Styling */
 footer {
@@ -372,20 +382,119 @@ footer h3,
     color: var(--blue);
 }
 
+/* ABOUT PAGE*/
+.head-image {
+    text-align: center;
+}
+
+.head-image img {
+    max-width: 100%;
+}
+
+.left-container {
+    grid-column: 1/13;
+    text-align: center;
+    padding: 2rem;
+}
+
+.left-container p {
+    text-align: justify;
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+.left-container ul {
+    text-align: left;
+    margin-left: 3rem;
+}
+
+.left-container ul li {
+    list-style-type: disc;
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+#purpose {
+    background-color: var(--yellow);
+}
+
+#missn div {
+    grid-column: 1/13;
+}
+
+.card-fa {
+    text-align: center;
+    font-size: 6rem;
+    color: var(--blue);
+}
+
+.link {
+    color: var(--blue);
+}
+
+#missn .card33 {
+    text-align: center;
+
+}
+
+#structure div div {
+    grid-column: 1/13;
+}
+
+#structure h3 {
+    margin: 2rem 1rem;
+}
+
+#structure img {
+    max-width: 80%;
+}
+
+.right-container {
+    display: none;
+}
+/* EVJ PAGE*/
+.head-image h2{
+    margin-top: 2rem;
+}
+.left{
+    color: var(--blue);
+    text-align: start ;
+    font-weight: 100 bold;
+    margin: 0;
+    padding: 0.3rem;
+}
+.numbered-list li{
+    list-style-type:decimal;
+    text-align: justify;
+    line-height: 1.2;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-style: oblique;
+}
+#guide a{
+    margin-bottom: 1rem;
+    width: 80%;
+}
+#journal-volumes div div{
+    grid-column: 1/13;
+}
 
 /* MEDIA QUERIES */
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+    body {
+        font-size: 16px;
+    }
 
     /*Nav*/
     .logo {
-        max-width: 10%;
+        max-width: 15%;
         border-radius: 50%;
     }
 
     .moto {
         font-style: italic;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     /*Welcome */
@@ -394,11 +503,10 @@ footer h3,
     }
 
     .welcome-text h2 {
-        color: var(--yellow);
-        font-weight: bolder;
+        font-weight: bold;
         font-size: 1.4rem;
         justify-content: center;
-        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
 
     .welcome-text p {
@@ -413,6 +521,10 @@ footer h3,
     }
 
     /*about*/
+    #about .card {
+        padding: 0 1rem;
+    }
+
     .card {
         display: flex;
     }
@@ -430,7 +542,7 @@ footer h3,
         display: block;
         padding: 0.5rem 2rem;
     }
-  
+
     .card-icon {
         text-align: center;
         max-width: 60%;
@@ -454,6 +566,50 @@ footer h3,
         font-size: 0.9rem;
     }
 
+    /*ABOUT PAGE*/
+    .card31,
+    .card32,
+    .card33 {
+        display: flex;
+    }
+
+    .card31 {
+        padding-top: 2rem;
+    }
+
+    #missn h4 {
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+
+    .card33 img {
+        padding-left: 4rem;
+    }
+
+    #structure {
+        margin-top: 2rem;
+    }
+
+    .card2 {
+        display: flex;
+    }
+
+    .card21 img {
+        width: 100%;
+
+    }
+
+    #partners h3 {
+        padding-top: 2rem;
+        font-size: 1.5rem;
+    }
+     /* EVJ PAGE*/
+     #journal-volumes div div{
+        grid-column: span 6;
+        display: block;
+    }
+
+
     /*Contact Form*/
     #contact form {
         width: 90%;
@@ -467,16 +623,20 @@ footer h3,
         max-width: 600px;
     }
 
+   
+
     /*Footer */
     /*Footer Styling */
-   #footer .cards .card{
-    grid-column: span 4;
-    display: block;
-   }
+    #footer .cards .card {
+        grid-column: span 4;
+        display: block;
+    }
+
     .evj-logo {
         max-width: 80%;
     }
-    #footer div p{
+
+    #footer div p {
         font-size: 0.8rem;
     }
 
@@ -490,98 +650,227 @@ footer h3,
         padding: 0.3rem;
         font-size: 1.2rem;
     }
-
-   
 }
 
 /* large tablets and laptops styles */
-@media screen and (min-width: 960px) {
-   /*grid*/
-    .grid{
+@media screen and (min-width:960px) {
+    body {
+        font-size: 18px;
+    }
+
+    /*grid*/
+    .grid {
         width: 100%;
-        max-width: 1060px;
+        /*max-width: 1060px;*/
         margin: 0 auto;
+        box-sizing: border-box;
     }
-    .mobile{
-        display: none;
-    }
-   
+
     /*Nav*/
     /* hide mobile nav */
-/*TOP nav styling */
-.top-nav {
-    margin: 0;
-    display: grid;
-    grid-column: 1/13;
-}
-.site-title{
-    grid-column: 1/6;
-}
+    .mobile {
+        display: none;
+    }
 
-.secondary-menu {
-    grid-column: 6/13;
-    justify-self: end;
-}
+    /*unhide social and secondary menus inside top-av*/
+    .secondary-menu {
+        display: grid;
+    }
 
-.logo {
-    float: left;
-    max-width: 25%;
-    border-radius: 50%;
-    padding: 1rem;
-}
-.moto{
-    align-self: center;
-    padding-top: 2rem;
-    display: block;
-    font-size: 2rem;
-}
-.social-top{
-    padding: 0.5rem;
-}
-.social-top a{
-    float: right;
-    padding:0.8rem;
-    font-size: 1.2rem;
-    color: var(--blue);
-}
+    /*TOP nav styling */
+    .site-title {
+        grid-column: 1/6;
+    }
 
-.submenu{
-    padding-top: 5rem;
-}
-.submenu a{
-    color: var(--blue);
-    padding: 0.5rem;
-}
-.social-top a:hover,.submenu a:hover{
-    color: var(--black);
-}
+    .secondary-menu {
+        grid-column: 6/13;
+        justify-self: end;
+    }
 
-/*main Nav*/
-.main-nav{
-    display: block;
-}
-nav {
-    margin: 0;
-    /* sticky nav*/
-    position: sticky;
-    top: 0px;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
-    background-color: #eef58f;
-    padding: 0.2rem 1rem;
-    z-index: 2;
-}
-nav ul{
-  display: flex;
-  padding: 0.5rem 0;
-  justify-content: space-between;
-}
+    .logo {
+        float: left;
+        max-width: 25%;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+
+    .moto {
+        align-self: center;
+        text-align: start;
+        padding-top: 2.5rem;
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .social-top {
+        padding: 0.5rem;
+    }
+
+    .social-top a {
+        float: right;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        color: var(--blue);
+    }
+
+    .submenu {
+        font-size: 1rem;
+        /*padding-top: 1rem;*/
+    }
+
+    .submenu a {
+        color: var(--blue);
+        padding: 0.5rem;
+    }
+
+    .social-top a:hover,
+    .submenu a:hover {
+        color: var(--black);
+        border-radius: 5px;
+    }
+
+    /*main Nav*/
+    .main-nav {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        padding: 0.5rem 0;
+        justify-content: space-between;
+        align-self: center;
+    }
+
+    /*welcome Carousel section styling*/
+    .leading {
+        margin: 20px auto;
+    }
+
+    .welcome-text {
+        align-self: center;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    /*President section*/
+    .president-msg {
+        display: flex;
+    }
+
+    .president-img {
+        max-width: 100%;
+    }
+
+    .president-img img {
+        width: 15rem;
+        height: 15rem;
+        margin: 0 1rem;
+        border: 1px solid #010108;
+    }
+
+    /*about Section*/
+
+    /* News, Training and projects Section*/
+    #news .cards .card,
+    #about .cards .card,
+    #trainings .cards .card,
+    #projects .cards .card {
+        grid-column: span 4;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .card-icon {
+        max-width: 80%;
+    }
+
+    .evj-logo {
+        max-width: 65%;
+        float: left;
+    }
+
+    #footer div p {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+
+    }
+
+    .social-bottom a {
+        font-size: 1.5rem;
+    }
+
+    /* ABOUT PAGE*/
+    .left-container {
+        grid-column: 1/10;
+    }
+
+    .right-container {
+        margin-top: 4rem;
+        display: grid;
+        grid-column: 10/13;
+        text-align: center;
+    }
+
+    .right-container .Right-nav li {
+        padding: 0.8rem;
+        border: 1px solid #7e7e7b;
+    }
+
+    .right-container .Right-nav li a:hover {
+        cursor: pointer;
+    }
+
 }
 
 /* desktop styles */
-@media screen and(min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     body {
         font-size: 20px;
     }
 
+    /*grid*/
 
+    /*Nav*/
+    .moto {
+        font-size: 2.2rem;
+    }
+
+    .social-top a,
+    .submenu a {
+        font-size: 1.3em;
+    }
+
+    nav ul a {
+        font-size: 1.4rem;
+    }
+
+    .welcome-text {
+        grid-column: 1/3;
+
+    }
+
+    .welcome-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .welcome-text p {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    #footer div p {
+        font-size: 1rem;
+
+
+    }
+
+    .social-bottom a {
+        font-size: 1.5rem;
+    }
 }

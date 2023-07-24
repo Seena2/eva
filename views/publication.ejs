@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs');%>
-<body>
-    <!--nav-->
-    <%- include('./partials/nav.ejs');%>
-    <!--Content-->
-    <div class="content">
-        <h2>Publications</h2>
 
+    <body>
+        <!--nav-->
+        <%- include('./partials/nav.ejs');%>
+            <!--Content-->
+            <div class="content">
+                <div class="head-image">
+                    
+                    <h2>PUBLICATIONS</h2>
+                </div>
+                <div class="container grid">
+                    <div class="left-container">
+                        <section id="background">
+                            
+                            <h4 class="left">Description</h4>
+                            <p>
+                                &nbsp;  This section present Publications of different kinds such as Newsletters, Bulletins, Guidelines, Proceedings as well as Output and Reports of Projects and different works done via EVA.  </p>
+                            
+                            
+                        </section>
+                        <section id="newsletter">
+                            <h4  class="left">Newsletter</h4>
+                        </section>
+                        <section id="bulletins">
+                            <h4  class="left">Bulletins</h4>
+                        </section>
+                        <section id="proceedings">
+                            <h4  class="left">Proceedings</h4>
+                        </section>
+                        <section id="guidelines">
+                            <h4  class="left">Guidelines</h4>
+                        </section>
+                        <section id="reports">
+                            <h4  class="left">Reports</h4>
+                        </section>
+                         
+                    </div>
+                    <div class="right-container">
+                        <ul class="Right-nav">
+                             <li><a href="#background" target="_top">Description </a></li>
+                            <li><a href="#Newsletter">Newsletters</a></li>
+                            <li><a href="#bulletins">Bulletins</a></li>
+                            <li><a href="#guidelines">Guidelines</a></li>
+                            <li><a href="#proceedings" >Proceedings</a></li>
+                            <li><a href="#reports">Reports</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-        
-    </div>
-    <!--Footer-->
-    <%- include('./partials/footer.ejs');%>
-</body>
+            </div>
+            <!--Footer-->
+            <%- include('./partials/footer.ejs');%>
+    </body>
+
 </html>

@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs');%>
-<body>
-    <!--nav-->
-    <%- include('./partials/nav.ejs');%>
-    <!--Content-->
-    <div class="content">
-        <h2>EVJ</h2>
+
+    <body>
+        <!--nav-->
+        <%- include('./partials/nav.ejs');%>
+            <!--Content-->
+            <div class="content">
+                <div class="head-image">
+
+                    <h2>ABOUT ETHIOPIAN VETERINARY JOURNAL</h2>
+                </div>
+                <div class="container grid">
+                    <div class="left-container">
+                        <section id="background">
+                            <h3 class="left">(Ethiop.Vet.J.)</h3>
+                            <h4 class="left">Description</h4>
+                            <p>
+                                &nbsp; The Ethiopian Veterinary journal (Ethiop.Vet.J.) is a multidisciplinary
+                                peer-reviewed scientific journal of the Ethiopian Veterinary Association(EVA) intended
+                                to promote animal health and production of national and regional /international
+                                importance. The journal publishes review articles, original research articles, short
+                                communication as well as technical notes in the English language.
+                            </p>
+                            <h4 id="evj-objective" class="left">Objectives of the EVJ</h4>
+                            <ol class="numbered-list">
+                                <li>To stand as the official scientific organ of the Ethiopian veterinary association
+                                    and serve as a medium of communication with professionals in the fields of animal
+                                    health and production and other related disciplines.</li>
+                                <li>To effectively disseminate research outputs in all spheres of veterinary service,
+                                    veterinary public health, animal production, and other related fields of study.</li>
+                                <li>to help promote agricultural development in Ethiopia and the sub-region as a whole
+                                    through generation via research technologies, methods, etc, and dissemination of
+                                    scientific knowledge to stakeholders and ultimately to end-users. Read more…</li>
+                            </ol>
+                        </section>
+                        <section id="guide">
+                            <a href="/evj" class="button">Guide for Authors</a>
+                            <a href="/evj" class="button">Editorial Board</a>
+                            <a href="https://www.ajol.info/index.php/evj" class="button" target="_blank">Other Links</a>
+                        </section>
+
+                        <section id="journal-volumes">
+                            <h3 class="section_header">JOURNAL VOLUMES</h3>
+                            <h4 class="left">Latest Journals</h4>
+                            <div class="cards grid">
+                                <div class="card">
+                                    <a href="">
+                                        <img class="card-icon" src="/assets/images/journal.png" alt=" about us">
+                                        <h4><a class="read-more" href="#">Volume 27, No.2</a></h4>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="">
+                                        <img class="card-icon" src="/assets/images/journal.png" alt=" about us">
+                                        <h4><a class="read-more" href="https://www.ajol.info/index.php/evj/issue/view/22071">Volume 27, No.1</a></h4>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="">
+                                        <img class="card-icon" src="/assets/images/journal.png" alt=" about us">
+                                        <h4><a class="read-more" href="https://www.ajol.info/index.php/evj/issue/view/21052">Volume 26, No.2</a></h4>
+                                    </a>
+                                </div>
+                                <div class="card">
+                                    <a href="">
+                                        <img class="card-icon" src="/assets/images/journal.png" alt=" about us">
+                                        <h4><a class="read-more" href="https://www.ajol.info/index.php/evj/issue/view/20620">Volume 26, No.1</a></h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div> <a href="/evj" class="button">More Journal Volumes-toggle</a></div>
+                            <div class="buttons">
+
+                                <a href="/evj" class="button">SUBMIT ARTICLE</a>
+                            </div>
 
 
-        
-    </div>
-    <!--Footer-->
-    <%- include('./partials/footer.ejs');%>
-</body>
+                        </section>
+
+
+                    </div>
+                    <div class="right-container">
+
+                        <ul class="Right-nav">
+                            <img src="/assets/images/evj.jpg" alt="EVJ-logo" srcset="">
+                            <li><a href="#background" target="_top">Description </a></li>
+                            <li><a href="#evj-objective">Objectives of the EVJ</a></li>
+                            <li><a href="#structure">Guide for Authors</a></li>
+                            <li><a href="#structure">Editorial Board</a></li>
+                            <li><a href="https://www.ajol.info/index.php/evj" target="_blank">Other Links</a></li>
+                            <li><a href="#journal-volumes">Journal Volumes</a></li>
+                            <li><a href="#partners">Submit Article</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <%- include('./partials/footer.ejs');%>
+    </body>
+
 </html>
