@@ -12,7 +12,7 @@ app.listen(port,()=>console.log(`server start running on port: ${port}`));
 //specify the public folder for static files like css and images
 app.use(express.static('public'));
 
-//Set routes to requsts and cooresponding response
+//Set routes to requests and cooresponding response
 //index page rendering
 app.get('/',(req,res)=>{
 res.render('index',{title:"Home"});
@@ -78,6 +78,13 @@ app.get('/contact', (req, res) => {
 //for Submenus
 app.get('/news/create', (req, res) => {
     res.render('create', { title: "Create News" });
+});
+//Other Links within the pages
+app.get('/courses', (req, res) => {
+    res.render('courses', { title: "courses" });
+});
+app.get('/modules', (req, res) => {
+    res.render('modules', { title: "modules" });
 });
 
 //404 
