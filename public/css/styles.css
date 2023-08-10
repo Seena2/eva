@@ -56,6 +56,7 @@ body {
     text-transform: uppercase;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
     display: inline-block;
+    font-size: 1.2rem;
 }
 
 .button:hover {
@@ -63,7 +64,6 @@ body {
     color: #fff;
     background: var(--blue);
 }
-
 
 
 /* fonts */
@@ -186,7 +186,7 @@ nav li a:hover {
 #welcome {
     align-items: center;
     padding: 30px 20px;
-   /* background: url(/assets/images/Participants-7-2.jpg);*/
+    /* background: url(/assets/images/Participants-7-2.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -203,7 +203,7 @@ nav li a:hover {
     margin-top: 15rem;
     grid-column: 1/5;
     background-color: rgba(31, 79, 212, 0.3);
-    padding:0 0.8rem ;
+    padding: 0 0.8rem;
     border-radius: 20px;
 }
 
@@ -221,35 +221,40 @@ nav li a:hover {
 }
 
 .buttons {
-   align-self: self-end;
+    color: var(--blue);
+    align-self: self-end;
     margin: 40px 0;
     text-align: center;
+
 }
 
 .buttons a {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+
 }
+
 /* buttons on coursel images, no caption*/
-.carousel-btn{
+.carousel-btn {
     background: url("/assets/conf36-web.jpg");
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:center center;
+    background-position: center center;
     max-width: 100%;
     max-height: 100%;
     padding: 9rem 1rem;
     position: relative;
-   height: 20vh;
+    height: 20vh;
 }
+
 .carousel-btn div {
     display: block;
-   position: absolute;
+    position: absolute;
     bottom: 0;
     text-align: center;
     padding: 1rem auto;
     right: 0;
+    color: var(--blue);
 }
 
 /*president message*/
@@ -265,8 +270,9 @@ nav li a:hover {
     margin-top: 0.3rem;
     padding: 2rem 1rem;
     text-align: center;
+    font-size: 1.5rem;
     font-weight: bolder;
-    text-decoration: underline;
+    display: block;
 }
 
 .president-img {
@@ -276,7 +282,6 @@ nav li a:hover {
 }
 
 .president-msg img {
-
     padding: auto;
     width: 10rem;
     height: 10rem;
@@ -293,41 +298,182 @@ nav li a:hover {
     padding: 2rem;
 }
 
-/* About Us, news,journals,Trainings,projects and partners  section*/
-#about div,
-#news div,
-#journals div,
-#trainings div,
-#projects div,
-#partners div,
-#footer div {
-    grid-column: 1/13;
-    
+/*About,News,Journals,trainings,projects section*/
+
+#about,
+#news,
+#journals,
+#trainings,
+#projects {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem auto;
 }
 
-.card {
+/*cards styling*/
+#about .card,
+#news .card,
+#journals .card,
+#trainings .card,
+#projects .card,
+#footer .card{
+    width: 90%;
+    overflow: hidden;
     text-align: center;
-    margin-top: 1rem;
+    border: 2px solid var(--blue);
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    margin: 1rem auto;
 }
 
-.card * {
-    margin-top: 0;
-    padding: auto;
+.card-img {
+    width: 230px;
+    margin: 20px auto;
 }
-.news-card-img{
-    width: 60%;
-    height: 70%;
-}
+
 .card-icon {
+    width: 100%;
+    font-size: 6rem;
+    color: var(--blue);
     text-align: center;
-    padding: auto;
-    max-width: 40%;
 }
 
-.card p {
-    padding: 0 1rem;
+.card-icon:hover,
+#journals .card-image:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.card-info h4 {
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-info p {
+    font-size: 1.1rem;
     text-align: justify;
-    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn button {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--yellow);
+    border: 1px solid var(--gray);
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 0 0 15px 15px;
+}
+
+#about .btn a,
+#journals .btn a,
+#projects .btn a {
+    font-size: 1.5rem;
+    color: #1f4fd4;
+}
+/* General card styles*/
+
+
+.card-container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem auto;
+}
+.card-container .card{
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid var(--blue);
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    margin: 1rem auto;
+}
+.card-container .card-info p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.card-container .card .btn a{
+    color: var(--blue);
+}
+
+/* Latest news*/
+#news .card,
+#trainings .card {
+    background: var(--bg);
+}
+
+#news .card-img,
+#trainings .card-img,
+#projects .card-img {
+    width: 100%;
+    margin-bottom: 0;
+    .card-image {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+#news button,
+#trainings button {
+    background: var(--blue);
+}
+
+.btn a {
+    color: var(--bg);
+}
+
+/*journals*/
+#journals .card-img {
+    width: 90%;
+    .card-image {
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    }
+}
+/*projects */
+#projects .card-img .card-image{
+    height: 350px;
+}
+
+
+.card-training {
+    grid-column: 1/13;
+    background-color: var(--lightblue);
+    margin: 2rem 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-module {
+    margin: 2rem 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-image {
+    width: 70%;
+    text-align: center;
+}
+
+.card-video {
+    width: 90%;
+    margin-left: 1.2rem;
+    align-self: center;
 }
 
 .card h4,
@@ -336,17 +482,7 @@ nav li a:hover {
     padding: 0.5rem;
 }
 
-.card h4 {
-    margin-bottom: 0;
-}
-
-#journals div div {
-    padding: 1rem;
-    grid-column: span 6;
-    text-align: center;
-}
-
-/* yellow stripe for odd secctions */
+/* yellow stripe for odd sections */
 #news,
 #trainings,
 #partners {
@@ -386,13 +522,15 @@ nav li a:hover {
 /*Logo sliders*/
 /*Animate logos slide */
 @keyframes slides {
-    from{
+    from {
         transform: translateX(0);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
+
 #partners {
     background-color: rgba(70, 68, 68, 0.1);
     overflow: hidden;
@@ -402,58 +540,85 @@ nav li a:hover {
 }
 /*fadeout effect*/
 #partners::before,
-#partners::after{
+#partners::after {
     position: absolute;
-    top:0;
+    top: 0;
     width: 200px;
     height: 100%;
     content: "";
     z-index: 2;
 }
-#partners::before{
-    left:0;
-    background: linear-gradient(to left,rgba(255,255,255,0),var(--bg));  
+#partners::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg));
 }
-#partners::after{
-    right:0;
-    background: linear-gradient(to right,rgba(255,255,255,0),var(--bg));  
+
+#partners::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg));
 }
+
 /*pouse on hover*/
-#partners:hover .logos-slide{
+#partners:hover .logos-slide {
     cursor: pointer;
-animation-play-state: paused;
+    animation-play-state: paused;
 }
 
-
-.logos-slide{
+.logos-slide {
     display: inline-block;
     animation: 10s slides infinite linear;
 }
-.logos-slide img{
+
+.logos-slide img {
     height: 100px;
     margin: 0 30px;
 }
 
 
 /*Footer Styling */
-footer {
+#footer {
+    width: 100%;
     background-color: #14153D;
-    padding: 30px 20px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem auto;
 }
 
 .evj-logo {
-    max-width: 40%;
+    text-align: center;
+    padding: 1rem auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
 }
 
-footer p {
+footer p{
     color: var(--bg);
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+}
+.social-bottom {
+    margin: 1rem 0;
 }
 
 footer h3,
 .social-bottom,
 .social-bottom a {
     color: var(--yellow);
+}
+footer h3{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+footer .card p{
+    font-size: 1rem;
+}
+.social-bottom i{
+    font-size: 1.2rem;
+    color: var(--bg); 
 }
 
 .social-bottom a {
@@ -469,123 +634,114 @@ footer h3,
 .head-image {
     text-align: center;
 }
-
 .head-image img {
     max-width: 100%;
 }
 
-.left-container {
-    grid-column: 1/13;
-    text-align: center;
-    padding: 2rem;
-}
-
-.left-container p {
+/*2 column page with sticky sidebar*/
+.sticky-container{
+    padding: 10px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: justify;
+}
+.main,.sidebar{
     padding: 1rem;
-    line-height: 1.4;
+    background-color: #fff;
 }
-
-.left-container ul {
-    text-align: left;
-    margin-left: 3rem;
+.main{
+    width: 90%; /*74*/ 
+    margin: 0 auto;
 }
-
-.left-container ul li {
-    list-style-type: disc;
-    padding: 0.5rem;
-    text-align: justify;
+.sidebar{
+    border-left: 1px solid rgb(201, 199, 199);
+    width: 25%;
+    height: 80vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10%;
 }
-
-#purpose {
-    background-color: var(--yellow);
-}
-
-#missn div {
-    grid-column: 1/13;
-}
-
-.card-fa {
-    text-align: center;
-    font-size: 6rem;
-    color: var(--blue);
-}
-
-.link {
-    color: var(--blue);
-}
-
-#missn .card33 {
-    text-align: center;
-
-}
-
-#structure div div {
-    grid-column: 1/13;
-}
-
-#structure h3 {
-    margin: 2rem 1rem;
-}
-
-#structure img {
-    max-width: 80%;
-}
-
-.right-container {
+/*hide sidebar for mobile devices*/
+.sidebar{
     display: none;
+}
+.main h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--yellow);
+    padding: 0.6rem;
+}
+
+.main ul {
+    padding-left: 2rem;
+}
+.main ul li{
+      list-style-type: square;
+      padding: 0.3rem;
+}
+.main .card-img{
+    width: 100%;
+}
+.main .card-image{
+    width: 90%;
+    text-align: center;
+    padding: 0 auto;
+}
+.sidebar ul li {
+    padding: 0.4rem 0;
+}
+.sidebar ul li a{
+    color: var(--blue);  
+    padding-left: 0.5rem;
+}
+.sidebar ul li:hover{
+    cursor: pointer;
+    display: block;
+    color: var(--black);
+    background: #f7f2f2;
+    border-left: 1px solid var(--blue);  
+}
+.sidebar img{
+    margin: 0;
+    padding: 0 auto;
+    width:80%;
+}
+.link{
+    color: var(--blue);
+    font-size: 1rem;
 }
 
 /* EVJ PAGE*/
 .head-image h2 {
     margin-top: 2rem;
 }
-
-.left {
-    color: var(--blue);
-    text-align: start;
-    font-weight: 100 bold;
-    margin: 0;
-    padding: 0.3rem;
+.main .archive-list li{
+    padding: 1rem 0;
+    border-bottom: 1px solid #cacac3;
 }
 
-.numbered-list {
-    margin-top: 0;
-    padding-top: 0;
-}
 
+
+
+/* MEMBERSHIP PAGE*/
+.bold{
+    font-weight: bold;
+}
 .numbered-list li {
     list-style-type: decimal;
     text-align: justify;
     line-height: 1.2;
-    padding: 0.5rem;
+    padding: 0.3rem;
     font-size: 1rem;
     font-style: oblique;
 }
 
-#guide a {
-    margin-bottom: 1rem;
-    width: 80%;
-}
-
-#journal-volumes div div {
-    grid-column: 1/13;
-}
-
-/* MEMBERSHIP PAGE*/
-#register .button {
-    margin-bottom: 1rem;
-}
 
 /* TRAINING PAGE*/
-
 #cpd div div {
     grid-column: 1/13;
-}
-
-.card-large {
-    background-color: var(--lightblue);
-    padding: 1.2rem 0;
 }
 
 .h3_title {
@@ -593,48 +749,10 @@ footer h3,
     line-height: 2;
     color: #f14c70;
 }
-
-.card3 div {
-    grid-column: 1/13;
-}
-
-.card-training {
-    grid-column: 1/13;
-    background-color: var(--lightblue);
-    margin: 2rem 1rem;
-    padding-bottom: 1rem;
-}
-
 .h4-title {
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 1.3;
-}
-
-.card-button {
-    display: block;
-    justify-self: center;
-    width: 80%;
-    border-top: var(--yellow);
-    color: var(--blue);
-    background-color: var(--yellow);
-    padding: 1.2rem;
-}
-
-.card-module {
-    margin: 2rem 1rem;
-    padding-bottom: 1rem;
-}
-
-.card-image {
-    width: 70%;
-    text-align: center;
-}
-
-.card-video {
-    width: 90%;
-    margin-left: 1.2rem;
-    align-self: center;
 }
 
 #training-faq .card2 {
@@ -643,13 +761,14 @@ footer h3,
 }
 
 /*NEWS PAGE*/
-.news-title{
+.news-title {
     text-align: center;
     font-weight: bold;
 }
-.news-img{
+
+.news-img {
     padding-left: 15rem;
-   justify-content: center;
+    justify-content: center;
     width: 50%;
     height: 10%;
     padding: 2rem auto;
@@ -696,27 +815,13 @@ footer h3,
         margin-bottom: 10px;
     }
 
-    /*about*/
-    #about .card {
-        padding: 0 1rem;
-    }
-
-    .card {
-        display: flex;
-    }
-
-    .card p {
-        text-align: justify;
-        font-size: 1rem;
-    }
-
-    /* News, Training and projects Section*/
-    #news .cards .card,
-    #trainings .cards .card,
-    #projects .cards .card {
-        grid-column: span 6;
-        display: block;
-        padding: 0.5rem 2rem;
+    /*about, news,journals section*/
+    #about .card,
+    #news .card,
+    #journals .card,
+    #trainings .card,
+    #projects .card     {
+        width: 40%;
     }
 
     .card-icon {
@@ -724,54 +829,13 @@ footer h3,
         max-width: 60%;
     }
 
-    /*journals section and partners*/
-    #journals div div,
-    #partners div div {
-        display: block;
-        padding: 1rem;
-        grid-column: span 3;
-        text-align: center;
-    }
-
-    #journals h4 {
-        text-align: center;
-        font-size: 1rem;
-    }
-
     .buttons a {
         font-size: 0.9rem;
     }
-
+ 
     /*ABOUT PAGE*/
-    .card3 {
-        padding-top: 2rem;
-    }
-
-    #missn h4 {
-        margin: 0;
-        padding-bottom: 2rem;
-    }
-
-    .card33 img {
-        padding-left: 4rem;
-    }
-
-    #structure {
-        margin-top: 2rem;
-    }
-
-    .card2 {
-        display: flex;
-    }
-
-    .card21 img {
-        width: 100%;
-
-    }
-
-    #partners h3 {
-        padding-top: 2rem;
-        font-size: 1.5rem;
+    .card-container .card{
+        width: 40%;
     }
 
     /* EVJ PAGE*/
@@ -796,7 +860,7 @@ footer h3,
     }
 
     .download-btn:hover {
-        background: #61cc4c;
+        background:var(--blue);
         color: var(--black);
     }
 
@@ -817,34 +881,12 @@ footer h3,
         width: 80%;
         max-width: 600px;
     }
-
-
-
     /*Footer */
-    /*Footer Styling */
-    #footer .cards .card {
-        grid-column: span 4;
-        display: block;
-    }
+    /*Footer Styling 620Px */
+   #footer .card{
+    width: 40%;
+   }
 
-    .evj-logo {
-        max-width: 80%;
-    }
-
-    #footer div p {
-        font-size: 0.8rem;
-    }
-
-    footer h3,
-    .social-bottom,
-    .social-bottom a {
-        color: var(--yellow);
-    }
-
-    .social-bottom a {
-        padding: 0.3rem;
-        font-size: 1.2rem;
-    }
 }
 
 /* large tablets and laptops styles */
@@ -967,41 +1009,35 @@ footer h3,
     }
 
     /*about Section*/
-
-    /* News, Training and projects Section*/
-    #news .cards .card,
-    #about .cards .card,
-    #trainings .cards .card,
-    #projects .cards .card {
-        grid-column: span 4;
-        display: block;
-        padding: 0.5rem 1rem;
+    #about .card,
+    #news .card,
+    #trainings .card,
+    #footer .card {
+        width: 30%;
     }
 
-    .card-icon {
-        max-width: 80%;
+    #journals .card {
+        width: 20%;
     }
 
-    .evj-logo {
-        max-width: 65%;
-        float: left;
-    }
-
-    #footer div p {
-        font-size: 0.9rem;
-        padding: 0.3rem;
+    #journals .btn a {
+        font-size: 1rem;
 
     }
-
     .social-bottom a {
         font-size: 1.5rem;
     }
 
     /* ABOUT PAGE*/
-    .left-container {
-        grid-column: 1/10;
+    .main{
+        width: 74%;
     }
-
+    .sidebar{
+        display: block;
+    }
+    .card-container .card{
+        width: 30%;
+    }
     .right-container {
         margin-top: 4rem;
         display: grid;
@@ -1076,6 +1112,14 @@ footer h3,
     .card p {
         font-size: 1.2rem;
     }
+
+    /*Journals section */
+
+
+/*About Page*/
+.card-container .card{
+    width: 20%;
+}
 
     #footer div p {
         font-size: 1rem;
