@@ -1,15 +1,21 @@
+
+
 const express= require('express');
 
 //Setup express
 const app=express();
 //register the "EJS" view engine on the app
 app.set('view engine', 'ejs');
+//specify where the views are placed
+app.set('/views','./views');
 
 //listen for requests on port ###
 const port=process.env.port||3000;
 app.listen(port,()=>console.log(`server start running on port: ${port}`));
 
 //specify the public folder for static files like css and images
+//app.use(express.static(__dirname +'public'));
+//app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static('public'));
 
 //Set routes to requests and cooresponding response
@@ -18,13 +24,15 @@ app.get('/',(req,res)=>{
 res.render('index',{title:"Home"});
 });
 
+
+
 //Top-Nav routing
 app.get('/faq', (req, res) => {
     res.render('faq', { title: "FAQ" });
 });
 
 app.get('/relatedlinks', (req, res) => {
-    res.render('relatedlinks', { title: "FAQ" });
+    res.render('relatedlinks', { title: "Related links" });
 });
 
 app.get('/jobs', (req, res) => {
@@ -80,7 +88,7 @@ app.get('/news/create', (req, res) => {
     res.render('create', { title: "Create News" });
 });
 
-//Other Links within the pages
+
 //EVJ
 app.get('/archive', (req, res) => {
     res.render('archive', { title: "archive" });
@@ -101,7 +109,20 @@ app.get('/evj-vol25n2', (req, res) => {
     res.render('evj-vol25n2', { title: "evj-vol25n2" });
 });
 
-//TRaining
+app.get('/manuscript', (req, res) => {
+    res.render('manuscript', { title: "manuscript submission" });
+});
+
+//Membership
+app.get('/regular', (req, res) => {
+    res.render('regular', { title: "Regular membership" });
+});
+app.get('/cooperate', (req, res) => {
+    res.render('cooperate', { title: "Cooperate membership" });
+});
+
+
+//Training
 app.get('/courses', (req, res) => {
     res.render('courses', { title: "courses" });
 });

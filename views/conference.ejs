@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs');%>
-<body>
-    <!--nav-->
-    <%- include('./partials/nav.ejs');%>
-    <!--Content-->
-    <div class="content">
-        <h2>EVA Conferences</h2>
+
+    <body>
+        <!--nav-->
+        <%- include('./partials/nav.ejs');%>
+            <!--Content-->
+            <div class="content">
+                <div class="head-image">
+                    <h2>EVA Conferences </h2>
+                </div>
+                <div class="sticky-container">
+                    <div class="main">
+                        <h4>THE 36th EVA ANNUAL CONFERENCE (2023)</h4>
+
+                        <section>
+                            <img class="conference-poster" src="/assets/conference/call-for-papers.png" alt="conference 36" srcset="">
+                        </section>
+
+                    </div>
+                    <div class="sidebar">
+                      
+                        <ul>
+                            <h3 class="h3_title">35<sup>th</sup> Conference, 2022</h3>
+                            <li><a href="#" target="_top">Summary</a></li>
+                            <li><a href="#">Gallery </a></li>
+                            <li><a href="#">proceedings </a></li>
+                            <li><a href="#">Resolutions </a></li>
+                         
+                        </ul>
+                        <ul>
+                            <h3 class="h3_title">34<sup>th</sup> Conference, 2021</h3>
+                            <li><a href="#" target="_top"> Summary</a></li>
+                            <li><a href="#">Gallery </a></li>
+                            <li><a href="#">proceedings </a></li>
+                            <li><a href="#">Resolutions </a></li>
+                         
+                        </ul>
+                    </div>
+                </div>
 
 
-        
-    </div>
-    <!--Footer-->
-    <%- include('./partials/footer.ejs');%>
-</body>
+
+            </div>
+            <!--Footer-->
+            <%- include('./partials/footer.ejs');%>
+    </body>
+
 </html>

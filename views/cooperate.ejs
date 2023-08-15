@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs');%>
+
+    <body>
+        <!--nav-->
+        <%- include('./partials/nav.ejs');%>
+            <!--Content-->
+            <div class="content">
+                <div class="head-image">
+                    <h2>Ethiopian Veterinary Association </h2>
+                    <h3 class="h3_title">NEW COOPERATIVE MEMBERS REGISTRATION FORM</h3>
+                </div>
+                <div class="sticky-container">
+                    <div class="main">
+                        <h4>Welcome</h4>
+                        <section>
+                            <p>Dear all respected!</p>
+                            <p>This is the official portal for the registration of new cooperative members of Ethiopian Veterinary Association (EVA). We would like to thank you for choosing to join EVA. </p>
+                            <p>We look forward to a collaborative endeavor to progress the Livestock sector, The Veterinary Profession, Animal and Public Health. </p>
+                            <p>Welcome! </p>
+                            <p>EVA Secretariat,</p>
+                           
+                        </section>
+                        <h4 id="instructions">INSTRUCTIONS</h4>
+                        <section>
+                            <p>According to Article 6 of EVA by-law, Cooperative member is:</p>
+                            <p>An apprentice and a veterinarian candidate; Professionals who are operating the veterinary and related activities such activities approved by the management board to meet the objectives of the association or could be supporting organizations. </p>
+                            <p>Thus, for organizations wishing to become members of EVA, kindly make sure that you have fulfilled the following document before progressing in filling out the registration form.
+                            </p>
+                            <ol class="numbered-list">
+                                <li> Make ready scanned copy of your organization's License / certificate - in PDF format</li>
+                                <li>Scanned registration fee receipt or if you are using the mobile banking, the transaction Number.</li>
+                                
+                            </ol>
+                            <p><b>Please note that</b></p>
+                            <ul>
+                                <li>For new corporate members the registration fee is <b>2,000</b> ETB, and the yearly membership fee is also <b>2,000 ETB. </b> ETB.</li>
+                                <li>Your registration will only be complete after a payment receipt is received by the
+                                    association.
+                                </li>
+                            </ul>
+                            <p>  
+                        </section>
+                        <h4 id="bankAccount">Bank Account Information</h4>
+                        <section>
+                            <p>Please forward your membership fee to the following bank account of Ethiopian Veterinary
+                                Association:</p>
+                                <ul>
+                                    <li> <b> Bank Name</b>: Commercial Bank of Ethiopia (CBE)</li>
+                                    <li> <b>Bank Country and City</b>: Addis Ababa, Ethiopia</li>
+                                    <li><b>Bank Branch Address</b> : Addis Ababa, Cape Verde  Street</li>
+                                    <li><b> Swift Code</b>: CBETATAA</li>
+                                    <li><b>AccountNumber</b>:1000050555333</li>
+                                    <li><b>Account Holder’s Name</b>: Ethiopian Veterinary Association </li>
+                                </ul>
+                        </section>
+                        <p></p>
+                        <p>For more information, you may reach us through: </p>
+                        <ul>
+                            <li>Phone Number : Tel 1: (+251)15 525020 or</li>
+                                <p> Tel 2: (+251) 18 697868</p>
+                            <li>Email: <span class="link">ethiopianveterinaryassociation@gmail.com</span>  </li>
+                        </ul>
+                        <h4 id="cooperate">Registration Form</h4>
+                        <section>
+                            <form id="regular" action="" method="post">
+                                <fieldset>
+                                    <legend><h4>DETAIL ABOUT YOUR ORGANIZATION</h4></legend>
+                                    <p>In this section you will be required to provide the name of your organization, the type of organization (whether it is governmental or private) and a brief of what your institute does. </p>
+                                    <label class="label"  for="oranization">Name of your Institute / Organization <span>*</span></label>
+                                    <input type="text" id="oranization" placeholder="">
+                                    
+                                    <label class="label" for="type">What type is your organization? <span>*</span></label>
+                                    <select class="dropdown"  name="type" id="type">
+                                        <option value="Governmental">Governmental</option>
+                                        <option value="NGO">Non-governmental organization</option>
+                                        <option value="private">private</option>
+                                       
+                                    </select>
+                                    <label class="label" for="mission">Your organization's mission <span>*</span></label>
+                                    <textarea name="mission" id="mission" cols="70" rows="5" placeholder="Mission"></textarea>
+                                    <label class="label" for="temporary">Attach scanned copy of your organizations license (in JPEG or PDF)<span>*</span></label>
+                                    <input type="file" id="temporary" name="temporary">
+                                   
+                                    
+
+                                </fieldset>
+                                <fieldset>
+                                    <legend><h4> YOUR ORGANIZATION ADDRESS</h4></legend>
+                                    <label class="label"  for="orgCountry">Country<span>*</span></label>
+                                    <input type="text" id="orgCountry" placeholder="">
+                                    <label class="label"  for="orgCity">City<span>*</span></label>
+                                    <input type="text" id="orgCity" placeholder="">
+                                    
+                                    <label class="label"  for="orgPhone">Phone Number(primary)-Please include country code<span>*</span></label>
+                                    <input id="orgPhone" type="tel">
+                                    <label class="label"  for="orgSecondary">Secondary Phone Number</label>
+                                    <input id="orgSecondary" type="tel">
+
+                                    <label class="label"  for="orgEmail">Email Address(primary)<span>*</span></label>
+                                    <input id="orgEmail" type="email">
+                                    <label class="label"  for="orgEmailSecondary">Email address (Secondary)</label>
+                                    <input id="orgEmailSecondary" type="email">
+
+                                    <label class="label"  for="orgPobox">P.o.box (If any)</label>
+                                    <input id="orgPobox" type="text">
+                                    <label class="label"  for="website">Website link</label>
+                                    <input id="website" type="text">
+                                    <label class="label"  for="telegram">Telegram</label>
+                                    <input id="telegram" type="text">
+                                    <label class="label"  for="twitter">Twitter</label>
+                                    <input id="twitter" type="text">
+
+                                    
+x
+                                </fieldset>
+                                <fieldset>
+                                    <legend><h4> YOUR ORGANIZATION'S REPRESENTATIVE  </h4></legend>
+                                    <p>Details of the person representing your organization, who could be president, CEO, director, manager or any other delegate who could be contacted on different matters.  </p>
+                                    <label class="label"  for="orgRep">Name of Representative<span>*</span></label>
+                                    <input type="text" id="orgRep" placeholder="">
+                                    <label class="label"  for="repRole">Role in the Organization<span>*</span></label>
+                                    <input type="text" id="repRole" placeholder="">
+                                    
+                                    <label class="label"  for="repPhone">Phone Number(primary)<span>*</span></label>
+                                    <input id="repPhone" type="tel">
+                                    <label class="label"  for="orgRepSecondaryPhone">Secondary Phone Number</label>
+                                    <input id="orgRepSecondaryPhone" type="tel">
+
+                                    <label class="label"  for="repEmail">Email Address(primary)<span>*</span></label>
+                                    <input id="repEmail" type="email">
+                                     
+                                </fieldset>
+                               
+                               
+                                
+                                <fieldset>
+                                    <legend><h4>UPLOAD YOUR RECEIPT</h4></legend>
+                                   <label class="label" for="receipt">Please upload scanned copy of membership fee here<span>*</span></label>
+                                    <input type="file" id="receipt" name="receipt">
+                                    
+                                </fieldset>
+                      
+                                <button class="button">Send Message</button>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="sidebar">
+                        <ul>
+                            
+                            <li><a href="#instructions" target="_top">Instructions</a></li>
+                            <li><a href="#bankAccount">Bank Account Information</a></li>
+                            <li><a href="#regular" > Regular Membership</a></li>
+                            <li><a href="/cooperate" target="_blank" > Cooperative Membership</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <%- include('./partials/footer.ejs');%>
+    </body>
+
+</html>

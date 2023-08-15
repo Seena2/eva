@@ -8,27 +8,262 @@
             <!--Content-->
             <div class="content">
                 <div class="head-image">
-
-                    <h2>Ethiopian Veterinary Association</h2>
-                    <h3> Members Registration </h3>
+                    <h2>Ethiopian Veterinary Association </h2>
+                    <h3 class="h3_title">NEW REGULAR MEMBERS REGISTRATION FORM</h3>
                 </div>
-                <div class="container grid">
-                    <div class="left-container">
-                        <h3> Regular Members Registration </h3>
-                        
+                <div class="sticky-container">
+                    <div class="main">
+                        <h4 id="instructions">INSTRUCTIONS</h4>
+                        <section>
+                            <p>For anyone interested to join EVA, kindly fulfill the following document before
+                                progressing in filling out the form.</p>
+                            <ol class="numbered-list">
+                                <li>Make ready scanned copy of your temporary degree - in PDF format</li>
+                                <li>Scanned recent photograph (Passport size preferable) - attach in JPEG format </li>
+                                <li>Scanned registration fee receipt or if you are using the mobile banking, the
+                                    transaction Number.
 
+                                </li>
+                            </ol>
+                            <p><b>Please note that</b></p>
+                            <ul>
+                                <li>For new regular members the registration fee
+                                    is <b> 350</b> ETB, and the yearly membership fee is <b>300</b> ETB.</li>
+                                <li>Your registration will only be complete after a payment receipt is received by the
+                                    association.
+                                </li>
+                            </ul>
+                            <p>             
+                        </section>
+                        <h4 id="bankAccount">Bank Account Information</h4>
+                        <section>
+                            <p>Please forward your membership fee to the following bank account of Ethiopian Veterinary
+                                Association:</p>
+                            <ul>
+                                <li> <b> Bank Name</b>: Commercial Bank of Ethiopia (CBE)</li>
+                                <li> <b>Bank Country and City</b>: Addis Ababa, Ethiopia</li>
+                                <li><b>Bank Branch Address</b> : Addis Ababa, Cape Verde Street</li>
+                                <li><b> Swift Code</b>: CBETATAA</li>
+                                <li><b>AccountNumber</b>:1000050555333</li>
+                                <li><b>Account Holder’s Name</b>: Ethiopian Veterinary Association </li>
+                            </ul>
+                        </section>
+                        <p></p>
+                        <p>For more information, you may reach us through: </p>
+                        <ul>
+                            <li>Phone Number : Tel 1: (+251)15 525020 or</li>
+                            <p> Tel 2: (+251) 18 697868</p>
+                            <li>Email: <span class="link">ethiopianveterinaryassociation@gmail.com</span> </li>
+                        </ul>
+                        <h4 id="regular">Registration Form</h4>
+                        <section>
+                            <form id="regular" action="" method="post">
+                                <fieldset>
+                                    <legend><h4>TYPE OF MEMBERSHIP</h4></legend>
+                                    <label class="label" for="membershipType">Choose type of membership</label>
+                                    <select class="dropdown" name="membershipType" id="membershipType">
+                                        <option value="Regular">Regular</option>
+                                        <option value="Cooperative">Cooperative</option>
+                                        <option value="Life time">Life time</option>
+                                        <option value="Honorary">Honorary</option>
+                                    </select>
+                                    <p>If you are unable to distinguish the types of membership available,
+                                        please review the available options <a class="link" href="/membership#conditions" target="_blank"> here</a>
+                                    </p>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>
+                                        <h4>Profile</h4>
+                                    </legend>
+                                    <label class="label" for="prefix">Prefix</label>
+                                    <select class="dropdown" name="prefix" id="prefix">
+                                        <option value="doctor">Dr.</option>
+                                        <option value="professor">Prof.</option>
+                                        <option value="Mr">Mr.</option>
+                                        <option value="Mrs">Mrs.</option>
+                                        <option value="Mis">Mis</option>
+                                    </select>
+                                    <label class="label" for="firstName">First Name <span>*</span></label>
+                                    <input type="text" id="firstName" placeholder="Given name">
+
+                                    <label class="label" for="middleName">Middle Name<span>*</span></label>
+                                    <input type="text" id="middleName" placeholder="Father name">
+
+                                    <label class="label" for="lastName">Last Name<span>*</span></label>
+                                    <input type="text" id="lastName" placeholder="Grandfather name">
+
+                                    <label class="label" for="dob">Date of Birth <span>*</span></label>
+                                    <input type="date" name="" id="dob">
+
+                                    <label class="label" for="dob">Gender : <span>*</span></label>
+                                    <input type="radio">Male
+                                    <input type="radio"><label for="">Female</label>
+
+                                    <label class="label" for="nationality">Nationality <span>*</span></label>
+                                    <input type="text" id="nationality" placeholder="Citizinship">
+
+                                    <label class="label" for="maritalStatus">Marital Status :</label>
+                                    <input type="radio">Married
+                                    <input type="radio">Single
+
+                                    <label class="label" for="dob">Number of Children:</label>
+                                    <input type="number">
+                                </fieldset>
+                                <fieldset>
+                                    <legend>
+                                        <h4>Current Address</h4>
+                                    </legend>
+                                    <label class="label" for="country">Country<span>*</span></label>
+                                    <input type="text" id="country" placeholder="Country where you live currently in">
+                                    <label class="label" for="city">City<span>*</span></label>
+                                    <input type="text" id="city" placeholder="City where you live currently in">
+
+                                    <label class="label" for="phone">Phone Number(primary)<span>*</span></label>
+                                    <input id="phone" type="tel">
+                                    <label class="label" for="phoneSecondary">Phone Number(Secondary)</label>
+                                    <input id="phoneSecondary" type="tel">
+
+                                    <label class="label" for="email">Email(primary)<span>*</span></label>
+                                    <input id="email" type="email">
+                                    <label class="label" for="emailSecondary">Email(Secondary)</label>
+                                    <input id="emailSecondary" type="email">
+
+                                    <label class="label" for="pobox">P.o.box (If any)</label>
+                                    <input id="pobox" type="text">
+
+
+                                    x
+                                </fieldset>
+                                <fieldset>
+                                    <legend>
+                                        <h4>CAREER INFORMATION</h4>
+                                    </legend>
+                                    <label class="label" for="employment">Current Employment
+                                        Status<span>*</span></label>
+                                    <select class="dropdown" name="employment" id="employment">
+                                        <option value="employed">Currently Working</option>
+                                        <option value="unemployed">Unemployed, but looking for career</option>
+                                    </select>
+                                    <label class="label" for="organization">If you are currently employed, Name of
+                                        Institute/Organization<span>*</span></label>
+                                    <input type="text" id="organization" placeholder="your organization">
+
+                                    <label class="label" for="organization_Type">Type of Organization</label>
+                                    <select class="dropdown" name="organization_Type" id="organization_Type">
+                                        <option value="Governmental">Governmental</option>
+                                        <option value="NGO">Non-Governmental(International
+                                            Organizations,Associations,...)</option>
+                                        <option value="Private">Private</option>
+                                        <option value="Own bussiness">Run my own business</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label class="label" for="role">Your role in your current Organization</label>
+                                    <input type="text" id="role" placeholder="your role/position">
+
+                                </fieldset>
+                                <fieldset>
+                                    <legend>
+                                        <h4>WORK ADDRESS</h4>
+                                    </legend>
+                                    <label class="label" for="workCountry">Country</label>
+                                    <input type="text" id="workCountry" placeholder="Country where you work in">
+                                    <label class="label" for="region">Region</label>
+                                    <input type="text" id="region" placeholder="Region">
+                                    <label class="label" for="workCity">City</label>
+                                    <input type="text" id="workCity" placeholder="city you work in">
+                                    <label class="label" for="district">District/Kebele</label>
+                                    <input type="text" id="district" placeholder="district">
+
+                                    <label class="label" for="previous-organizations">List any other organization(s)
+                                        that you have worked for previously.</label>
+                                    <textarea name="previous-organizations" id="previous-organizations" cols="70"
+                                        rows="10"
+                                        placeholder="All organizations you work for separated by comma"></textarea>
+                                    <label class="label" for="experiance">Total years of experience (In years)
+                                        <span>*</span> </label>
+                                    <input type="number" id="experiance" placeholder="experiance">
+
+                                    <label class="label" for="careerInterest">What is your career Interest?</label>
+                                    <select class="dropdown" name="careerInterest" id="careerInterest">
+                                        <option value="Academician">Academician</option>
+                                        <option value="Researcher">Researcher</option>
+                                        <option value="Field practitioner">Field practitioner</option>
+                                        <option value="Private practitioner">Private practitioner</option>
+                                        <option value="Work for development organizations">To work for development
+                                            organizations</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend>
+                                        <h4>EDUCATION</h4>
+                                    </legend>
+                                    <label class="label" for="qualification">Highest level of academic qualification
+                                        achieved <span>*</span></label>
+                                    <select class="dropdown" name="qualification" id="qualification">
+                                        <option value="DVM">DVM</option>
+                                        <option value="MSc / MVSc">MSc / MVSc</option>
+                                        <option value="PhD">PhD</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label class="label" for=" year-firstDegree">When have you completed your first
+                                        degree?</label>
+                                    <input id="year-firstDegree" type="date">
+                                    <label class="label" for="Institute-firstDegree">From which institute have you
+                                        acquired your first degree?</label>
+                                    <input id="Institute-firstDegree" type="text">
+
+                                    <label class="label" for="year-masters">When have you completed your <b> masters</b>
+                                        degree?(If any)</label>
+                                    <input id="year-masters" type="date">
+                                    <label class="label" for="Institute-masters">From which institute have you acquired
+                                        your masters degree?</label>
+                                    <input id="Institute-masters" type="text">
+
+                                    <label class="label" for="year-phd">When have you completed your? (If any)</label>
+                                    <input id="year-phd" type="date">
+                                    <label class="label" for="Institute-phd">From which institute have you acquired your
+                                        <b>PhD</b>?</label>
+                                    <input id="Institute-phd" type="text">
+                                    <label class="label" for="other-qualifications">If you have any other
+                                        qualifications, please list.</label>
+                                    <textarea name="other-qualifications" id="other-qualifications" cols="70" rows="10"
+                                        placeholder="Qualifications separated by comma,"></textarea>
+
+                                </fieldset>
+                                <fieldset>
+                                    <legend>
+                                        <h4>Document Attachments</h4>
+                                    </legend>
+                                    <label class="label" for="temporary">Please upload scanned copy of your temporary
+                                        degree <span>*</span></label>
+                                    <input type="file" id="temporary" name="temporary">
+                                    <label class="label" for="photo">Please upload scanned copy of your passport size
+                                        photograph <span>*</span></label>
+                                    <input type="file" id="photo" name="photo">
+
+                                </fieldset>
+                                <fieldset>
+                                    <legend><h4>Agreement</h4></legend>
+                                    <p>I have carefully read the Ethiopian Veterinary Association constitution as amended at the meeting held from 19-20 June 1992, in Addis Ababa and I fully agree to be bound to the rules and regulations of the Association. With this in mind, I apply</p>
+                                    <input type="radio"><label for="">To be registered as a new member</label>
+                                    <input type="radio"><label for="">For renewal of my membership</label>
+                                </fieldset>
+
+                                <button class="button">Send Message</button>
+                            </form>
+                        </section>
                     </div>
-                    <div class="right-container">
+                    <div class="sidebar">
+                        <ul>
 
-                        <ul class="Right-nav">
-                            <img src="/assets/images/evj.jpg" alt="EVJ-logo" srcset="">
-                            <li><a href="#background" target="_top">Description </a></li>
-                            <li><a href="#evj-objective">Objectives of the EVJ</a></li>
-                            <li><a href="#structure">Guide for Authors</a></li>
-                            <li><a href="#structure">Editorial Board</a></li>
-                            <li><a href="https://www.ajol.info/index.php/evj" target="_blank">Other Links</a></li>
-                            <li><a href="#journal-volumes">Journal Volumes</a></li>
-                            <li><a href="#partners">Submit Article</a></li>
+                            <li><a href="#instructions" target="_top">Instructions</a></li>
+                            <li><a href="/membership#conditions" target="_blank">Membership Types</a></li>
+                            <li><a href="#bankAccount">Bank Account Information</a></li>
+                            <li><a href="#regular"> Regular Membership</a></li>
+                            <li><a href="/cooperate" target="_blank"> Cooperative Membership</a></li>
+
                         </ul>
                     </div>
                 </div>

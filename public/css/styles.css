@@ -53,7 +53,7 @@ body {
     color: var(--blue);
     padding: 6px 12px;
     border-radius: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
     display: inline-block;
     font-size: 1.2rem;
@@ -320,7 +320,7 @@ nav li a:hover {
 #journals .card,
 #trainings .card,
 #projects .card,
-#footer .card{
+#footer .card {
     width: 90%;
     overflow: hidden;
     text-align: center;
@@ -383,10 +383,11 @@ nav li a:hover {
     font-size: 1.5rem;
     color: #1f4fd4;
 }
+
 /* General card styles*/
 
 
-.card-container{
+.card-container {
     width: 90%;
     height: 100%;
     display: flex;
@@ -395,7 +396,8 @@ nav li a:hover {
     justify-content: space-around;
     margin: 1rem auto;
 }
-.card-container .card{
+
+.card-container .card {
     width: 90%;
     overflow: hidden;
     text-align: center;
@@ -405,12 +407,15 @@ nav li a:hover {
     justify-content: center;
     margin: 1rem auto;
 }
-.card-container .card-info p{
-    text-align: center;
+
+.card-container .card-info p {
+    text-align: justify;
     font-size: 1rem;
     font-weight: bold;
+
 }
-.card-container .card .btn a{
+
+.card-container .card .btn a {
     color: var(--blue);
 }
 
@@ -425,6 +430,7 @@ nav li a:hover {
 #projects .card-img {
     width: 100%;
     margin-bottom: 0;
+
     .card-image {
         width: 100%;
         margin-bottom: 0;
@@ -443,43 +449,15 @@ nav li a:hover {
 /*journals*/
 #journals .card-img {
     width: 90%;
+
     .card-image {
         box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
     }
 }
+
 /*projects */
-#projects .card-img .card-image{
+#projects .card-img .card-image {
     height: 350px;
-}
-
-
-.card-training {
-    grid-column: 1/13;
-    background-color: var(--lightblue);
-    margin: 2rem 1rem;
-    padding-bottom: 1rem;
-}
-
-.card-module {
-    margin: 2rem 1rem;
-    padding-bottom: 1rem;
-}
-
-.card-image {
-    width: 70%;
-    text-align: center;
-}
-
-.card-video {
-    width: 90%;
-    margin-left: 1.2rem;
-    align-self: center;
-}
-
-.card h4,
-.read-more {
-    color: #1f4fd4;
-    padding: 0.5rem;
 }
 
 /* yellow stripe for odd sections */
@@ -489,35 +467,6 @@ nav li a:hover {
     background-color: var(--yellow);
 }
 
-/*Contact Form*/
-#contact {
-    padding: 30px 20px;
-    background: #bfcef7;
-}
-
-#contact h3,
-#contact p {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-#contact form {
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    margin: 10px 0;
-    padding: 0.5rem;
-    border-radius: 20px;
-    border: 2px solid #9893D8;
-    display: block;
-    color: #222;
-}
 
 /*Logo sliders*/
 /*Animate logos slide */
@@ -538,6 +487,7 @@ nav li a:hover {
     white-space: nowrap;
     position: relative;
 }
+
 /*fadeout effect*/
 #partners::before,
 #partners::after {
@@ -548,6 +498,7 @@ nav li a:hover {
     content: "";
     z-index: 2;
 }
+
 #partners::before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg));
@@ -595,10 +546,11 @@ nav li a:hover {
     border-radius: 1rem;
 }
 
-footer p{
+footer p {
     color: var(--bg);
     font-size: 1.2rem;
 }
+
 .social-bottom {
     margin: 1rem 0;
 }
@@ -608,17 +560,20 @@ footer h3,
 .social-bottom a {
     color: var(--yellow);
 }
-footer h3{
+
+footer h3 {
     font-size: 1.5rem;
     padding: 0.5rem;
     font-weight: bold;
 }
-footer .card p{
+
+footer .card p {
     font-size: 1rem;
 }
-.social-bottom i{
+
+.social-bottom i {
     font-size: 1.2rem;
-    color: var(--bg); 
+    color: var(--bg);
 }
 
 .social-bottom a {
@@ -634,12 +589,13 @@ footer .card p{
 .head-image {
     text-align: center;
 }
+
 .head-image img {
     max-width: 100%;
 }
 
 /*2 column page with sticky sidebar*/
-.sticky-container{
+.sticky-container {
     padding: 10px;
     background-color: #ccc;
     display: flex;
@@ -647,15 +603,20 @@ footer .card p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: justify;
 }
-.main,.sidebar{
+
+.main,
+.sidebar {
     padding: 1rem;
     background-color: #fff;
 }
-.main{
-    width: 90%; /*74*/ 
+
+.main {
+    width: 90%;
+    /*74*/
     margin: 0 auto;
 }
-.sidebar{
+
+.sidebar {
     border-left: 1px solid rgb(201, 199, 199);
     width: 25%;
     height: 80vh;
@@ -663,11 +624,13 @@ footer .card p{
     position: sticky;
     top: 10%;
 }
+
 /*hide sidebar for mobile devices*/
-.sidebar{
+.sidebar {
     display: none;
 }
-.main h4{
+
+.main h4 {
     font-size: 1.2rem;
     font-weight: bold;
     background: var(--yellow);
@@ -677,38 +640,50 @@ footer .card p{
 .main ul {
     padding-left: 2rem;
 }
-.main ul li{
-      list-style-type: square;
-      padding: 0.3rem;
+
+.main ul li {
+    list-style-type: square;
+    padding: 0.3rem;
 }
-.main .card-img{
+
+.main .card-img {
     width: 100%;
 }
-.main .card-image{
+
+.main .card-image {
     width: 90%;
     text-align: center;
     padding: 0 auto;
 }
+
+.main .card-info a {
+    margin: 1rem;
+}
+
 .sidebar ul li {
     padding: 0.4rem 0;
 }
-.sidebar ul li a{
-    color: var(--blue);  
+
+.sidebar ul li a {
+    color: var(--blue);
     padding-left: 0.5rem;
 }
-.sidebar ul li:hover{
+
+.sidebar ul li:hover {
     cursor: pointer;
     display: block;
     color: var(--black);
     background: #f7f2f2;
-    border-left: 1px solid var(--blue);  
+    border-left: 1px solid var(--blue);
 }
-.sidebar img{
+
+.sidebar img {
     margin: 0;
     padding: 0 auto;
-    width:80%;
+    width: 80%;
 }
-.link{
+
+.link {
     color: var(--blue);
     font-size: 1rem;
 }
@@ -717,18 +692,25 @@ footer .card p{
 .head-image h2 {
     margin-top: 2rem;
 }
-.main .archive-list li{
+
+.main .archive-list li {
     padding: 1rem 0;
     border-bottom: 1px solid #cacac3;
 }
-
-
-
+.temp-menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #c5c5bd;
+    
+}
 
 /* MEMBERSHIP PAGE*/
-.bold{
+.bold {
     font-weight: bold;
+    padding: 0.5rem;
 }
+
 .numbered-list li {
     list-style-type: decimal;
     text-align: justify;
@@ -738,26 +720,102 @@ footer .card p{
     font-style: oblique;
 }
 
+/* REgistration Forms*/
+form {
+    background-color: #d3d6dd;
+    padding: 2rem;
+    width: 90%;
+    margin: 20px auto;
 
-/* TRAINING PAGE*/
-#cpd div div {
-    grid-column: 1/13;
+    .label{
+        display: block;
+        width: 85%;
+       padding: 0.3rem;
+    }
+
+    .dropdown,input {
+        width: 90%;
+        height: 1.8rem;
+        border: 1px solid #999;
+        font-size: 1rem;
+        background-color: #eee;
+        border-radius: 5px;
+        margin: 0 auto 1rem;
+        padding-left: 0.5rem;
+    }
+
+    
+    .txt-field {
+        padding: 1rem;
+    }
+    radio{
+        margin: 0;
+    }
+
 }
 
+/*contact forms*/
+
+/*Contact Form*/
+#contact {
+    padding: 30px 20px;
+    background: #bfcef7;
+}
+
+#contact h3,
+#contact p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact form {}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: 2px solid #9893D8;
+    display: block;
+    color: #222;
+}
+
+/* TRAINING PAGE*/
 .h3_title {
     font-size: 1.4rem;
     line-height: 2;
     color: #f14c70;
 }
-.h4-title {
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.3;
+
+.card-image {
+    width: 70%;
+    text-align: center;
 }
 
-#training-faq .card2 {
-    background-color: red;
-    grid-column: 1/13;
+.card-video {
+    width: 90%;
+    margin-left: 1.2rem;
+    align-self: center;
+}
+
+.card h4,
+.read-more {
+    color: #1f4fd4;
+    padding: 0.5rem;
+}
+
+/*Project Page*/
+.lvc {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*Conference Page*/
+.conference-poster {
+    width: 80%;
+    padding: 0 2rem;
 }
 
 /*NEWS PAGE*/
@@ -820,7 +878,7 @@ footer .card p{
     #news .card,
     #journals .card,
     #trainings .card,
-    #projects .card     {
+    #projects .card {
         width: 40%;
     }
 
@@ -832,9 +890,9 @@ footer .card p{
     .buttons a {
         font-size: 0.9rem;
     }
- 
+
     /*ABOUT PAGE*/
-    .card-container .card{
+    .card-container .card {
         width: 40%;
     }
 
@@ -842,10 +900,6 @@ footer .card p{
     #journal-volumes div div {
         grid-column: span 6;
         display: block;
-    }
-
-    #guide div {
-        margin-bottom: 1.4rem;
     }
 
     .download-btn {
@@ -860,7 +914,7 @@ footer .card p{
     }
 
     .download-btn:hover {
-        background:var(--blue);
+        background: var(--blue);
         color: var(--black);
     }
 
@@ -881,11 +935,12 @@ footer .card p{
         width: 80%;
         max-width: 600px;
     }
+
     /*Footer */
     /*Footer Styling 620Px */
-   #footer .card{
-    width: 40%;
-   }
+    #footer .card {
+        width: 40%;
+    }
 
 }
 
@@ -1024,26 +1079,25 @@ footer .card p{
         font-size: 1rem;
 
     }
+
     .social-bottom a {
         font-size: 1.5rem;
     }
 
     /* ABOUT PAGE*/
-    .main{
+    .main {
         width: 74%;
     }
-    .sidebar{
+
+    .sidebar {
         display: block;
     }
-    .card-container .card{
+
+    .card-container .card {
         width: 30%;
     }
-    .right-container {
-        margin-top: 4rem;
-        display: grid;
-        grid-column: 10/13;
-        text-align: center;
-    }
+
+
 
     .Right-nav {
         grid-column: 10/13;
@@ -1116,10 +1170,10 @@ footer .card p{
     /*Journals section */
 
 
-/*About Page*/
-.card-container .card{
-    width: 20%;
-}
+    /*About Page*/
+    .card-container .card {
+        width: 20%;
+    }
 
     #footer div p {
         font-size: 1rem;
@@ -1130,4 +1184,9 @@ footer .card p{
     .social-bottom a {
         font-size: 1.5rem;
     }
+}
+
+/*Training Page*/
+.card-container .card-large {
+    width: 47%
 }
