@@ -33,7 +33,7 @@
                                     association.
                                 </li>
                             </ul>
-                            <p>             
+                            <p>
                         </section>
                         <h4 id="bankAccount">Bank Account Information</h4>
                         <section>
@@ -59,7 +59,9 @@
                         <section>
                             <form id="regular" action="" method="post">
                                 <fieldset>
-                                    <legend><h4>TYPE OF MEMBERSHIP</h4></legend>
+                                    <legend>
+                                        <h4>TYPE OF MEMBERSHIP</h4>
+                                    </legend>
                                     <label class="label" for="membershipType">Choose type of membership</label>
                                     <select class="dropdown" name="membershipType" id="membershipType">
                                         <option value="Regular">Regular</option>
@@ -68,7 +70,8 @@
                                         <option value="Honorary">Honorary</option>
                                     </select>
                                     <p>If you are unable to distinguish the types of membership available,
-                                        please review the available options <a class="link" href="/membership#conditions" target="_blank"> here</a>
+                                        please review the available options <a class="link"
+                                            href="/membership#conditions" target="_blank"> here</a>
                                     </p>
                                 </fieldset>
                                 <fieldset>
@@ -84,54 +87,71 @@
                                         <option value="Mis">Mis</option>
                                     </select>
                                     <label class="label" for="firstName">First Name <span>*</span></label>
-                                    <input type="text" id="firstName" placeholder="Given name">
+                                    <input class="txt" type="text" id="firstName" placeholder="Given name">
 
                                     <label class="label" for="middleName">Middle Name<span>*</span></label>
-                                    <input type="text" id="middleName" placeholder="Father name">
+                                    <input class="txt" type="text" id="middleName" placeholder="Father name">
 
                                     <label class="label" for="lastName">Last Name<span>*</span></label>
-                                    <input type="text" id="lastName" placeholder="Grandfather name">
+                                    <input class="txt" type="text" id="lastName" placeholder="Grandfather name">
 
                                     <label class="label" for="dob">Date of Birth <span>*</span></label>
-                                    <input type="date" name="" id="dob">
+                                    <input class="txt" type="date" name="" id="dob">
+                                    <p class="label">Gender: <span>*</span>
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="gender">
+                                            Male
+                                        </label>
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="gender">
+                                            Female
+                                        </label>
+                                    </p>
 
-                                    <label class="label" for="dob">Gender : <span>*</span></label>
-                                    <input type="radio">Male
-                                    <input type="radio"><label for="">Female</label>
 
                                     <label class="label" for="nationality">Nationality <span>*</span></label>
-                                    <input type="text" id="nationality" placeholder="Citizinship">
+                                    <input class="txt" type="text" id="nationality" placeholder="Citizinship">
 
-                                    <label class="label" for="maritalStatus">Marital Status :</label>
-                                    <input type="radio">Married
-                                    <input type="radio">Single
 
-                                    <label class="label" for="dob">Number of Children:</label>
-                                    <input type="number">
+                                    <p class="label">Marital Status:
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="maritalStatus">
+                                            Married
+                                        </label>
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="maritalStatus">
+                                            Single
+                                        </label>
+                                    </p>
+                                    <label class="label" for="children">Number of Children:</label>
+                                    <input class="txt" type="number" id="children">
+                                    <label class="label" for="photo">Please upload scanned copy of your passport size
+                                        photograph <span>*</span></label>
+                                    <input type="file" id="photo" name="photo">
                                 </fieldset>
                                 <fieldset>
                                     <legend>
                                         <h4>Current Address</h4>
                                     </legend>
                                     <label class="label" for="country">Country<span>*</span></label>
-                                    <input type="text" id="country" placeholder="Country where you live currently in">
+                                    <input class="txt" type="text" id="country"
+                                        placeholder="Country where you live currently in">
                                     <label class="label" for="city">City<span>*</span></label>
-                                    <input type="text" id="city" placeholder="City where you live currently in">
+                                    <input class="txt" type="text" id="city"
+                                        placeholder="City where you live currently in">
 
                                     <label class="label" for="phone">Phone Number(primary)<span>*</span></label>
-                                    <input id="phone" type="tel">
+                                    <input class="txt" id="phone" type="tel">
                                     <label class="label" for="phoneSecondary">Phone Number(Secondary)</label>
-                                    <input id="phoneSecondary" type="tel">
+                                    <input class="txt" id="phoneSecondary" type="tel">
 
                                     <label class="label" for="email">Email(primary)<span>*</span></label>
-                                    <input id="email" type="email">
+                                    <input class="txt" id="email" type="email">
                                     <label class="label" for="emailSecondary">Email(Secondary)</label>
-                                    <input id="emailSecondary" type="email">
+                                    <input class="txt" id="emailSecondary" type="email">
 
                                     <label class="label" for="pobox">P.o.box (If any)</label>
-                                    <input id="pobox" type="text">
-
-
+                                    <input class="txt" id="pobox" type="text">
                                     x
                                 </fieldset>
                                 <fieldset>
@@ -146,7 +166,7 @@
                                     </select>
                                     <label class="label" for="organization">If you are currently employed, Name of
                                         Institute/Organization<span>*</span></label>
-                                    <input type="text" id="organization" placeholder="your organization">
+                                    <input class="txt" type="text" id="organization" placeholder="your organization">
 
                                     <label class="label" for="organization_Type">Type of Organization</label>
                                     <select class="dropdown" name="organization_Type" id="organization_Type">
@@ -158,7 +178,7 @@
                                         <option value="Other">Other</option>
                                     </select>
                                     <label class="label" for="role">Your role in your current Organization</label>
-                                    <input type="text" id="role" placeholder="your role/position">
+                                    <input class="txt" type="text" id="role" placeholder="your role/position">
 
                                 </fieldset>
                                 <fieldset>
@@ -166,13 +186,14 @@
                                         <h4>WORK ADDRESS</h4>
                                     </legend>
                                     <label class="label" for="workCountry">Country</label>
-                                    <input type="text" id="workCountry" placeholder="Country where you work in">
+                                    <input class="txt" type="text" id="workCountry"
+                                        placeholder="Country where you work in">
                                     <label class="label" for="region">Region</label>
-                                    <input type="text" id="region" placeholder="Region">
+                                    <input class="txt" type="text" id="region" placeholder="Region">
                                     <label class="label" for="workCity">City</label>
-                                    <input type="text" id="workCity" placeholder="city you work in">
+                                    <input class="txt" type="text" id="workCity" placeholder="city you work in">
                                     <label class="label" for="district">District/Kebele</label>
-                                    <input type="text" id="district" placeholder="district">
+                                    <input class="txt" type="text" id="district" placeholder="district">
 
                                     <label class="label" for="previous-organizations">List any other organization(s)
                                         that you have worked for previously.</label>
@@ -181,7 +202,7 @@
                                         placeholder="All organizations you work for separated by comma"></textarea>
                                     <label class="label" for="experiance">Total years of experience (In years)
                                         <span>*</span> </label>
-                                    <input type="number" id="experiance" placeholder="experiance">
+                                    <input class="txt" type="number" id="experiance" placeholder="experiance">
 
                                     <label class="label" for="careerInterest">What is your career Interest?</label>
                                     <select class="dropdown" name="careerInterest" id="careerInterest">
@@ -209,23 +230,23 @@
                                     </select>
                                     <label class="label" for=" year-firstDegree">When have you completed your first
                                         degree?</label>
-                                    <input id="year-firstDegree" type="date">
+                                    <input class="txt" id="year-firstDegree" type="date">
                                     <label class="label" for="Institute-firstDegree">From which institute have you
                                         acquired your first degree?</label>
-                                    <input id="Institute-firstDegree" type="text">
+                                    <input class="txt" id="Institute-firstDegree" type="text">
 
                                     <label class="label" for="year-masters">When have you completed your <b> masters</b>
                                         degree?(If any)</label>
-                                    <input id="year-masters" type="date">
+                                    <input class="txt" id="year-masters" type="date">
                                     <label class="label" for="Institute-masters">From which institute have you acquired
                                         your masters degree?</label>
-                                    <input id="Institute-masters" type="text">
+                                    <input class="txt" id="Institute-masters" type="text">
 
                                     <label class="label" for="year-phd">When have you completed your? (If any)</label>
-                                    <input id="year-phd" type="date">
+                                    <input class="txt" id="year-phd" type="date">
                                     <label class="label" for="Institute-phd">From which institute have you acquired your
                                         <b>PhD</b>?</label>
-                                    <input id="Institute-phd" type="text">
+                                    <input class="txt" id="Institute-phd" type="text">
                                     <label class="label" for="other-qualifications">If you have any other
                                         qualifications, please list.</label>
                                     <textarea name="other-qualifications" id="other-qualifications" cols="70" rows="10"
@@ -239,19 +260,31 @@
                                     <label class="label" for="temporary">Please upload scanned copy of your temporary
                                         degree <span>*</span></label>
                                     <input type="file" id="temporary" name="temporary">
-                                    <label class="label" for="photo">Please upload scanned copy of your passport size
-                                        photograph <span>*</span></label>
-                                    <input type="file" id="photo" name="photo">
+
 
                                 </fieldset>
                                 <fieldset>
-                                    <legend><h4>Agreement</h4></legend>
-                                    <p>I have carefully read the Ethiopian Veterinary Association constitution as amended at the meeting held from 19-20 June 1992, in Addis Ababa and I fully agree to be bound to the rules and regulations of the Association. With this in mind, I apply</p>
-                                    <input type="radio"><label for="">To be registered as a new member</label>
-                                    <input type="radio"><label for="">For renewal of my membership</label>
+                                    <legend>
+                                        <h4>Agreement</h4>
+                                    </legend>
+                                    <p>I have carefully read the Ethiopian Veterinary Association constitution as
+                                        amended at the meeting held from 19-20 June 1992, in Addis Ababa and I fully
+                                        agree to be bound to the rules and regulations of the Association. With this in
+                                        mind, I apply</p>
+                                    
+                                    <p>
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="agreement">
+                                            To be registered as a new member
+                                        </label>
+                                        <label class="radioBtn" for="">
+                                            <input type="radio" name="agreement">
+                                            For renewal of my membership
+                                        </label>
+                                    </p>
                                 </fieldset>
 
-                                <button class="button">Send Message</button>
+                                <button class="button formBtn">Send Message</button>
                             </form>
                         </section>
                     </div>

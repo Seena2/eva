@@ -47,25 +47,6 @@ body {
     width: 100%;
 }
 
-.button {
-    background: var(--yellow);
-    border: 2px solid var(--bg);
-    color: var(--blue);
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-transform: capitalize;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
-    display: inline-block;
-    font-size: 1.2rem;
-}
-
-.button:hover {
-    cursor: pointer;
-    color: #fff;
-    background: var(--blue);
-}
-
-
 /* fonts */
 @font-face {
     font-family: 'Rubic Regular';
@@ -103,15 +84,53 @@ h4 {
     font-size: 1.1em;
 }
 
+/*BUTTON and LINK STYLING */
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: end;
+}
+
+.btn {
+    /* button*/
+    margin-top: 0.25rem;
+    padding: 0.25rem;
+    display: block;
+    background-color: var(--yellow);
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--bg);
+    border-radius: 0.35rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
+    cursor: pointer;
+    transition: 4ms ease-in-out;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--blue);
+    background: var(--blue);
+    color: var(--bg);
+    cursor: pointer;
+}
+
 /*Grid spec*/
 .grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 10px;
+    gap: 0.7rem;
 }
 
 /* MOBILE STYLES */
-/* hide social and secondary on mobiles and use burger menu for main-Nav */
+/* TOP NAV STYLING*/
+/* Hide secondary Menu(which contains social and submenu) and Main-nav
+     on mobiles and use burger menu for main-Nav */
+
 .secondary-menu {
     display: none;
 }
@@ -128,58 +147,98 @@ h4 {
 
 .moto {
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-/*hide main-nav and use mobile nav instead*/
+/*MAIN NAV STYLING*/
 .main-nav {
-    display: none;
-}
-
-/*main Nav*/
-nav {
     /* sticky nav*/
     position: sticky;
     top: 0px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
     background-color: #eef58f;
-    padding: 0.2rem 1rem;
     z-index: 2;
 }
 
-.mobile {
-    grid-column: 1/13;
-}
-
-.mobile ul {
+/*Mobile/Hamberger Menu styling */
+/*hide the checkbox inside nav*/
+.nav-checkbox {
     display: none;
 }
 
-.mobile div {
-    grid-column: 1/13;
+/*hide the toggle checkbox*/
+.nav-toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0 1rem;
+    right: 0;
+    font-size: 1.4rem;
+    color: var(--blue);
+    font-weight: bold;
+    align-items: center;
+
+    .fa-bars {
+        margin-top: 0.5rem;
+    }
+
+    /* hide close icon initally to toggle between hamberger*/
+    .fa-xmark {
+        display: none;
+    }
 }
 
-.mobile div a {
-    font-size: 1.4rem;
-    justify-content: space-between;
+/* The Mobile Nav munu's links */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+/*initially hide the links until the hamberger menu is clicked*/
+.nav-menu li {
+    display: none;
+}
+
+.nav-menu li:first-child {
+    margin-right: auto;
+    display: block;
     padding: 0.5rem;
 }
 
-nav li a {
+.nav-menu li a {
     color: #1f4fd4;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
-    transform: 7s ease;
-    font-weight: 100;
+    align-items: center;
+    transform: 1ms ease;
 }
 
-nav li a:hover {
-    display: inline;
+.nav-menu a:hover,
+.nav-toggle:hover {
     background: var(--blue);
     color: var(--bg);
-    padding: 0.7rem;
+    padding: 0.35rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
 }
+
+/*toggle nav menu when checkbox is clicked*/
+.nav-checkbox:checked~ul.nav-menu li {
+    display: block;
+}
+
+/* switch to close icon when toggled*/
+.nav-checkbox:checked~label.nav-toggle .fa-xmark {
+    display: block;
+}
+
+.nav-checkbox:checked~label.nav-toggle .fa-bars {
+    display: none;
+}
+
+*/
 
 /*Index page styling */
 /*Carousel slider*/
@@ -242,7 +301,7 @@ nav li a:hover {
     background-position: center center;
     max-width: 100%;
     max-height: 100%;
-    padding: 9rem 1rem;
+    padding: 10rem 1rem;
     position: relative;
     height: 20vh;
 }
@@ -697,12 +756,13 @@ footer .card p {
     padding: 1rem 0;
     border-bottom: 1px solid #cacac3;
 }
-.temp-menu{
+
+.temp-menu {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     background-color: #c5c5bd;
-    
+
 }
 
 /* MEMBERSHIP PAGE*/
@@ -720,20 +780,25 @@ footer .card p {
     font-style: oblique;
 }
 
-/* REgistration Forms*/
+/* Registration Forms*/
 form {
     background-color: #d3d6dd;
     padding: 2rem;
     width: 90%;
     margin: 20px auto;
 
-    .label{
+    .label {
         display: block;
         width: 85%;
-       padding: 0.3rem;
+        padding: 0.3rem;
     }
 
-    .dropdown,input {
+    .label span {
+        color: red;
+    }
+
+    .dropdown,
+    .txt {
         width: 90%;
         height: 1.8rem;
         border: 1px solid #999;
@@ -744,17 +809,44 @@ form {
         padding-left: 0.5rem;
     }
 
-    
+
     .txt-field {
         padding: 1rem;
     }
-    radio{
-        margin: 0;
+
+    .radioBtn {
+        padding: 0.3rem 2rem;
+        justify-content: flex-start;
+        display: block;
     }
+
+    .formBtn {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .txtarea {
+        border-radius: 8px;
+    }
+
+    /*login form*/
+    #login {
+        border-radius: 10px;
+        background-color: #1f4fd4;
+    }
+
+    .whiteBg {
+        background: var(--bg);
+        padding: 1rem;
+    }
+
+    .astrix {
+        color: red;
+    }
+
 
 }
 
-/*contact forms*/
 
 /*Contact Form*/
 #contact {
@@ -768,7 +860,6 @@ form {
     margin-bottom: 1rem;
 }
 
-#contact form {}
 
 #contact input,
 #contact textarea {
@@ -960,7 +1051,7 @@ form {
 
     /*Nav*/
     /* hide mobile nav */
-    .mobile {
+    .main-nav .nav-toggle {
         display: none;
     }
 
@@ -971,17 +1062,17 @@ form {
 
     /*TOP nav styling */
     .site-title {
-        grid-column: 1/6;
+        grid-column: 1/8;
     }
 
     .secondary-menu {
-        grid-column: 6/13;
+        grid-column: 8/13;
         justify-self: end;
     }
 
     .logo {
         float: left;
-        max-width: 25%;
+        max-width: 20%;
         border-radius: 50%;
         padding: 1rem;
     }
@@ -989,7 +1080,7 @@ form {
     .moto {
         align-self: center;
         text-align: start;
-        padding-top: 2.5rem;
+        padding-top: 3.8rem;
         display: block;
         font-size: 1.6rem;
     }
@@ -1021,16 +1112,21 @@ form {
         border-radius: 5px;
     }
 
-    /*main Nav*/
-    .main-nav {
-        display: block;
+    /*Main Nav*/
+    .nav-menu {
+        flex-direction: row;
     }
 
-    nav ul {
-        display: flex;
-        padding: 0.5rem 0;
+    .nav-menu li {
+        display: block;
+        padding: 0.5rem 0 0;
         justify-content: space-between;
         align-self: center;
+
+    }
+
+    .nav-menu li a {
+        font-size: 1rem;
     }
 
     /*welcome Carousel section styling*/
