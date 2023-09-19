@@ -91,13 +91,20 @@ h4 {
     justify-content: end;
 }
 
+.btn-group-centered {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 .btn {
     /* button*/
-    margin-top: 0.25rem;
-    padding: 0.25rem;
+    margin-top: 0.3rem;
+    padding: 0.25rem 1rem;
     display: block;
     background-color: var(--yellow);
-    color: #000;
+    color: var(--blue);
     text-transform: capitalize;
     text-align: center;
     text-decoration: none;
@@ -106,6 +113,12 @@ h4 {
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
     cursor: pointer;
     transition: 4ms ease-in-out;
+    outline: none;
+
+    /* curved or half moon buttons to align with border radius
+    border: 1px solid var(--gray);
+    border-radius: 0 0 15px 15px;
+    */
 }
 
 .btn:active {
@@ -118,6 +131,25 @@ h4 {
     color: var(--bg);
     cursor: pointer;
 }
+
+.download-btn {
+    background: #e6774b;
+    border: 2px solid var(--bg);
+    color: var(--bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-transform: initial;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
+    font-size: 0.8rem;
+}
+
+/* Back ground colors*/
+.yellow-bg {
+    background-color: var(--yellow);
+}
+
+/*palcement*/
+
 
 /*Grid spec*/
 .grid {
@@ -147,7 +179,7 @@ h4 {
 
 .moto {
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /*MAIN NAV STYLING*/
@@ -170,7 +202,7 @@ h4 {
 .nav-toggle {
     position: absolute;
     cursor: pointer;
-    margin: 0 1rem;
+    margin: 0 2rem;
     right: 0;
     font-size: 1.4rem;
     color: var(--blue);
@@ -193,11 +225,10 @@ h4 {
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    margin: 1rem;
-
+    padding: 0 1rem 0.5rem;
 }
 
-/*initially hide the links until the hamberger menu is clicked*/
+/*Initially hide the links until the hamberger menu is clicked*/
 .nav-menu li {
     display: none;
 }
@@ -205,7 +236,7 @@ h4 {
 .nav-menu li:first-child {
     margin-right: auto;
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
 }
 
 .nav-menu li a {
@@ -220,7 +251,7 @@ h4 {
 .nav-toggle:hover {
     background: var(--blue);
     color: var(--bg);
-    padding: 0.35rem;
+    padding: 0.75rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
 }
 
@@ -238,19 +269,19 @@ h4 {
     display: none;
 }
 
-*/
 
 /*Index page styling */
 /*Carousel slider*/
 #welcome {
     align-items: center;
-    padding: 30px 20px;
-    /* background: url(/assets/images/Participants-7-2.jpg);*/
+    padding: 1.5rem 1rem;
+    background: url(/images/Participants-7-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     max-width: 100%;
     max-height: 100%;
+    position: relative;
 }
 
 #welcome div {
@@ -258,19 +289,19 @@ h4 {
 }
 
 .welcome-text {
-    margin: 1rem 0.2rem;
-    margin-top: 15rem;
+    margin: 5rem 0.2rem;
     grid-column: 1/5;
-    background-color: rgba(31, 79, 212, 0.3);
+    background-color: rgba(46, 69, 134, 0.5);
     padding: 0 0.8rem;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
 
 .welcome-text h2 {
     color: var(--yellow);
     font-size: 1.2rem;
     justify-content: center;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
 }
 
 .welcome-text p {
@@ -279,42 +310,6 @@ h4 {
     font-size: 1rem;
 }
 
-.buttons {
-    color: var(--blue);
-    align-self: self-end;
-    margin: 40px 0;
-    text-align: center;
-
-}
-
-.buttons a {
-    font-size: 1.2rem;
-
-}
-
-/* buttons on coursel images, no caption*/
-.carousel-btn {
-    background: url("/assets/conf36-web.jpg");
-    align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10rem 1rem;
-    position: relative;
-    height: 20vh;
-}
-
-.carousel-btn div {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding: 1rem auto;
-    right: 0;
-    color: var(--blue);
-}
 
 /*president message*/
 #President-message {
@@ -326,7 +321,7 @@ h4 {
 }
 
 .section_header {
-    margin-top: 0.3rem;
+    margin-top: 1rem;
     padding: 2rem 1rem;
     text-align: center;
     font-size: 1.5rem;
@@ -358,171 +353,84 @@ h4 {
 }
 
 /*About,News,Journals,trainings,projects section*/
-
-#about,
-#news,
-#journals,
-#trainings,
-#projects {
-    width: 90%;
+/* General card styles*/
+.card-container {
+    width: 95%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 1rem;
     justify-content: space-around;
     margin: 1rem auto;
+    align-items: center;
 }
 
 /*cards styling*/
-#about .card,
-#news .card,
-#journals .card,
-#trainings .card,
-#projects .card,
-#footer .card {
-    width: 90%;
+.card-container .card {
+    background: var(--bg);
+    width: 100%;
     overflow: hidden;
     text-align: center;
     border: 2px solid var(--blue);
-    border-radius: 15px;
+    border-radius: 1rem;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
     justify-content: center;
-    margin: 1rem auto;
+    margin: 1rem;
 }
 
 .card-img {
-    width: 230px;
-    margin: 20px auto;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .card-icon {
     width: 100%;
-    font-size: 6rem;
+    font-size: 5rem;
     color: var(--blue);
     text-align: center;
+    margin-top: 1rem;
 }
 
-.card-icon:hover,
-#journals .card-image:hover {
+.card-img .card-image {
+    width: 100%;
+    max-height: 50vh;
+
+}
+
+.card-image:hover,
+.card-icon:hover {
     transform: scale(1.1);
     transition: 0.4s;
 }
 
 .card-info h4 {
-    font-size: 1.3rem;
-    padding: 0 0.5rem;
-    margin-top: 0;
+    font-size: 1.4rem;
+    padding: 0 auto;
+    text-align: center;
     margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
 }
 
 .card-info p {
-    font-size: 1.1rem;
-    text-align: justify;
-    padding: 0 1rem;
-}
-
-.btn {
-    width: 100%;
-}
-
-.btn button {
-    width: 100%;
-    padding: 0.5rem;
-    background: var(--yellow);
-    border: 1px solid var(--gray);
-    outline: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 0 0 15px 15px;
-}
-
-#about .btn a,
-#journals .btn a,
-#projects .btn a {
-    font-size: 1.5rem;
-    color: #1f4fd4;
-}
-
-/* General card styles*/
-
-
-.card-container {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 1rem auto;
-}
-
-.card-container .card {
-    width: 90%;
-    overflow: hidden;
-    text-align: center;
-    border: 2px solid var(--blue);
-    border-radius: 15px;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    margin: 1rem auto;
-}
-
-.card-container .card-info p {
-    text-align: justify;
     font-size: 1rem;
-    font-weight: bold;
-
+    text-align: justify;
+    padding: 1rem;
+    font: sans-serif;
 }
 
-.card-container .card .btn a {
-    color: var(--blue);
-}
 
-/* Latest news*/
-#news .card,
-#trainings .card {
+/* white bg strip*/
+#news,
+#trainings {
     background: var(--bg);
-}
-
-#news .card-img,
-#trainings .card-img,
-#projects .card-img {
-    width: 100%;
-    margin-bottom: 0;
-
-    .card-image {
-        width: 100%;
-        margin-bottom: 0;
-    }
-}
-
-#news button,
-#trainings button {
-    background: var(--blue);
-}
-
-.btn a {
-    color: var(--bg);
-}
-
-/*journals*/
-#journals .card-img {
-    width: 90%;
-
-    .card-image {
-        box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
-    }
-}
-
-/*projects */
-#projects .card-img .card-image {
-    height: 350px;
 }
 
 /* yellow stripe for odd sections */
 #news,
 #trainings,
 #partners {
+    width: 100%;
     background-color: var(--yellow);
 }
 
@@ -589,7 +497,6 @@ h4 {
 #footer {
     width: 100%;
     background-color: #14153D;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -605,43 +512,29 @@ h4 {
     border-radius: 1rem;
 }
 
-footer p {
-    color: var(--bg);
-    font-size: 1.2rem;
-}
-
-.social-bottom {
-    margin: 1rem 0;
-}
-
-footer h3,
-.social-bottom,
-.social-bottom a {
-    color: var(--yellow);
-}
-
-footer h3 {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    font-weight: bold;
-}
-
-footer .card p {
-    font-size: 1rem;
-}
-
-.social-bottom i {
-    font-size: 1.2rem;
-    color: var(--bg);
-}
-
-.social-bottom a {
-    padding: 0.6rem;
-    font-size: 1.5rem;
-}
-
-.social-bottom a:hover {
+footer h2 {
+    text-align: center;
+    padding: 1rem;
     color: var(--blue);
+    font-size: 1.7rem;
+}
+.foot-p p{
+        padding-top: 0.1rem;
+        font: 1.4rem sans-serif;
+        text-align: start;
+}
+.footer-bottom, .copyr{
+ color: var(--bg);
+}
+.social-bottom a{
+    color:var(--yellow);
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+.social-bottom a:hover{
+    cursor:pointer;
+    color:var(--blue);
+    text-decoration: underline;
 }
 
 /* ABOUT PAGE*/
@@ -655,7 +548,7 @@ footer .card p {
 
 /*2 column page with sticky sidebar*/
 .sticky-container {
-    padding: 10px;
+    padding: 0.5rem;
     background-color: #ccc;
     display: flex;
     justify-content: space-between;
@@ -670,10 +563,12 @@ footer .card p {
 }
 
 .main {
-    width: 90%;
-    /*74*/
+    width: 90%;/*74*/    
     margin: 0 auto;
-}
+   }
+  .main section p{
+    font-size: 1rem;
+   }
 
 .sidebar {
     border-left: 1px solid rgb(201, 199, 199);
@@ -703,24 +598,37 @@ footer .card p {
 .main ul li {
     list-style-type: square;
     padding: 0.3rem;
+    font-size: 1rem;
+}
+.main em{
+    font-size: 1rem;
+    font-style:italic;
+    font-weight: bold;
+    color: #c72014;
+    padding-bottom: 0.4rem;
 }
 
 .main .card-img {
     width: 100%;
 }
 
-.main .card-image {
-    width: 90%;
+.main .card-container .card .card-image {
+    width: 95%;
     text-align: center;
-    padding: 0 auto;
+    margin-top: 0.75rem;
+    padding:  auto;
+    border-radius: 0.8rem;
+}
+.main .card-container .card h4 {
+   margin: 0;
+   padding: 0;
 }
 
-.main .card-info a {
-    margin: 1rem;
-}
 
 .sidebar ul li {
-    padding: 0.4rem 0;
+    padding: 0.4rem 0 0;
+    font-size: 1.1rem;
+    padding-bottom: 0.3rem;
 }
 
 .sidebar ul li a {
@@ -740,6 +648,7 @@ footer .card p {
     margin: 0;
     padding: 0 auto;
     width: 80%;
+    height: 40%;
 }
 
 .link {
@@ -769,8 +678,12 @@ footer .card p {
 .bold {
     font-weight: bold;
     padding: 0.5rem;
+    font-size:1rem;
 }
 
+.numbered-list{
+margin-top: 0;
+}
 .numbered-list li {
     list-style-type: decimal;
     text-align: justify;
@@ -779,6 +692,7 @@ footer .card p {
     font-size: 1rem;
     font-style: oblique;
 }
+
 
 /* Registration Forms*/
 form {
@@ -965,11 +879,7 @@ form {
     }
 
     /*about, news,journals section*/
-    #about .card,
-    #news .card,
-    #journals .card,
-    #trainings .card,
-    #projects .card {
+    .card-container .card{
         width: 40%;
     }
 
@@ -978,14 +888,8 @@ form {
         max-width: 60%;
     }
 
-    .buttons a {
-        font-size: 0.9rem;
-    }
-
     /*ABOUT PAGE*/
-    .card-container .card {
-        width: 40%;
-    }
+   
 
     /* EVJ PAGE*/
     #journal-volumes div div {
@@ -993,16 +897,6 @@ form {
         display: block;
     }
 
-    .download-btn {
-        background: #e6774b;
-        border: 2px solid var(--bg);
-        color: var(--bg);
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        text-transform: initial;
-        box-shadow: 1px 2px 3px rgba(0, 0, 0, .6);
-        font-size: 0.8rem;
-    }
 
     .download-btn:hover {
         background: var(--blue);
@@ -1010,8 +904,6 @@ form {
     }
 
     /*Training 620px */
-
-
 
 
     /*Contact Form*/
@@ -1028,10 +920,7 @@ form {
     }
 
     /*Footer */
-    /*Footer Styling 620Px */
-    #footer .card {
-        width: 40%;
-    }
+   
 
 }
 
@@ -1047,12 +936,6 @@ form {
         /*max-width: 1060px;*/
         margin: 0 auto;
         box-sizing: border-box;
-    }
-
-    /*Nav*/
-    /* hide mobile nav */
-    .main-nav .nav-toggle {
-        display: none;
     }
 
     /*unhide social and secondary menus inside top-av*/
@@ -1072,7 +955,7 @@ form {
 
     .logo {
         float: left;
-        max-width: 20%;
+        max-width: 15%;
         border-radius: 50%;
         padding: 1rem;
     }
@@ -1080,7 +963,7 @@ form {
     .moto {
         align-self: center;
         text-align: start;
-        padding-top: 3.8rem;
+        padding-top: 2.5rem;
         display: block;
         font-size: 1.6rem;
     }
@@ -1091,25 +974,31 @@ form {
 
     .social-top a {
         float: right;
-        padding: 0.8rem;
-        font-size: 1.2rem;
+        padding-left: 0.8rem;
+        font-size: 1rem;
         color: var(--blue);
     }
 
     .submenu {
-        font-size: 1rem;
-        /*padding-top: 1rem;*/
+        font-size: 0.8rem;
+        padding-left: 1rem;
     }
 
     .submenu a {
         color: var(--blue);
-        padding: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     .social-top a:hover,
     .submenu a:hover {
         color: var(--black);
         border-radius: 5px;
+    }
+
+    /*Nav*/
+    /* hide mobile nav */
+    .main-nav .nav-toggle {
+        display: none;
     }
 
     /*Main Nav*/
@@ -1122,12 +1011,12 @@ form {
         padding: 0.5rem 0 0;
         justify-content: space-between;
         align-self: center;
-
     }
 
     .nav-menu li a {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+
 
     /*welcome Carousel section styling*/
     .leading {
@@ -1158,24 +1047,24 @@ form {
         margin: 0 1rem;
         border: 1px solid #010108;
     }
+    .president-m p{
+        font-size: 1rem;
+    }
 
-    /*about Section*/
-    #about .card,
-    #news .card,
-    #trainings .card,
-    #footer .card {
+    /* Sections index: about, news,training, width:30%*/
+    .card-container .card{
         width: 30%;
+        margin: 0;
     }
 
     #journals .card {
-        width: 20%;
+        width: 22%;
+    }
+    #projects .card{
+        width:45%;
     }
 
-    #journals .btn a {
-        font-size: 1rem;
-
-    }
-
+ /*Footer*/
     .social-bottom a {
         font-size: 1.5rem;
     }
@@ -1189,34 +1078,15 @@ form {
         display: block;
     }
 
-    .card-container .card {
-        width: 30%;
-    }
 
-
-
-    .Right-nav {
-        grid-column: 10/13;
-    }
-
-    .right-container .Right-nav li {
-        display: flex;
-        padding: 0.8rem;
-        border: 1px solid #7e7e7b;
-    }
-
-    .right-container .Right-nav li a:hover {
-        cursor: pointer;
-    }
 
     /* EVJ PAGE*/
-    .for-mobile-only {
-        display: none;
+    .main .journal-vols .card{
+        width: 22%;
     }
-
-    #journal-volumes div div {
-        grid-column: span 3;
-        display: block;
+    /*PUBLICATIONS PAGE*/
+    .main .newsletters .card{
+        width: 17%;
     }
 
     /*MEMBERSHIP PAGE */
@@ -1234,46 +1104,30 @@ form {
 
     /*Nav*/
     .moto {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .social-top a,
     .submenu a {
-        font-size: 1.3em;
+        font-size: 1.1rem;
+        padding-left: 0.75rem;
     }
 
-    nav ul a {
-        font-size: 1.4rem;
-    }
-
-    .welcome-text {
-        grid-column: 1/3;
-
-    }
-
-    .welcome-text h2 {
-        font-size: 1.6rem;
-    }
-
-    .welcome-text p {
+    .nav-menu ul a {
         font-size: 1.3rem;
     }
 
-    .card p {
-        font-size: 1.2rem;
-    }
 
+
+    /* Sections*/
+    .card-container .card{
+        width: 30%;
+        margin: 0;
+    }
+    
     /*Journals section */
-
-
-    /*About Page*/
-    .card-container .card {
-        width: 20%;
-    }
-
     #footer div p {
         font-size: 1rem;
-
 
     }
 

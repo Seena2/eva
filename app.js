@@ -1,29 +1,32 @@
+/* Import required modules*/
+const express = require('express');
 
+//Initialize express app and middleware
+const app = express();
 
-const express= require('express');
+//DB CONNECTIONS
+ //listen for requests on port ###
+ const port = process.env.port || 3000;  
+ app.listen(port, () =>{
+     console.log(`The app start listening on port: ${port}`);
+ })
 
-//Setup express
-const app=express();
 //register the "EJS" view engine on the app
 app.set('view engine', 'ejs');
 //specify where the views are placed
-app.set('/views','./views');
-
-//listen for requests on port ###
-const port=process.env.port||3000;
-app.listen(port,()=>console.log(`server start running on port: ${port}`));
+app.set('/views', './views');
 
 //specify the public folder for static files like css and images
-//app.use(express.static(__dirname +'public'));
+//app.use(express.static(__dirname + 'public'));
 //app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static('public'));
 
 //Set routes to requests and cooresponding response
 //index page rendering
-app.get('/',(req,res)=>{
-res.render('index',{title:"Home"});
+//get request handlers
+app.get('/', (req, res) => {
+    res.render('index', { title: "Home" });
 });
-
 
 
 //Top-Nav routing
@@ -116,6 +119,7 @@ app.get('/manuscript', (req, res) => {
 //Membership
 app.get('/regular', (req, res) => {
     res.render('regular', { title: "Regular membership" });
+    
 });
 app.get('/cooperate', (req, res) => {
     res.render('cooperate', { title: "Cooperate membership" });
